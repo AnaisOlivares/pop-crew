@@ -116,6 +116,12 @@ li.glyphicon {
   float: left;
   border: 1px solid #050000;
 }
+
+ /* .caption {
+  position: absolute;
+  
+  color: rgb(43, 2, 39);
+} */
 /* Tiny Carousel 2 */
 .slider2 {
   height: 1%;
