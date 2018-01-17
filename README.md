@@ -14,12 +14,12 @@
 
 •  El objetivo a lograr es tener la pagina con la funcionalidad al 100% ,obtener una data con toda la informacion de los videos que queremos mostrar y mostrarlo en la pagina.
 
-![home](assets/img/tex.jpg)
+![home](assets/images/tex.jpg)
 
 ## SKECTH
 
-![home](assets/img/vista_home.png)
-![pelicula](assets/img/vista_pelicula.png)
+![home](assets/images/vista_home.png)
+![pelicula](assets/images/vista_pelicula.png)
 
 ## RECURSOS A UTILIZAR:
 
