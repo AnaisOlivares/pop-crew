@@ -1,0 +1,182 @@
+.navbar {
+  background-color:white;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.logo {
+  margin-top: 12%;
+}
+.collapse {
+  margin-top: 2%;
+}
+.search-bar {
+  margin-left: 15%;
+  display: inline;
+  
+}
+/*input*/
+.form-control {
+  display: inline;
+  width: 20%;
+}
+.nav {
+  margin-right: 15%;
+}
+#premium {
+  font-size: 20px;
+  border-radius: 20px;
+}
+li.glyphicon {
+  margin-left: 3%;
+}
+
+
+#carousel {
+  width: 700px;
+  margin: 30px auto;
+}
+#carousel ul {
+  list-style: none;
+  widows: 2100px;
+  display: flex;
+
+  animation: slide 20s infinite;
+}
+@keyframes slide {
+  0% {margin-left: 0px;}
+  20% {margin-left: 0px;}
+
+  25% {margin-left: -700px;}
+  45% {margin-left: }
+}
+
+/* Tiny Carousel */
+.slider {
+  width: 631px;
+}
+#slider1 {
+  height: 1%;
+  margin: 30px 0 0;
+  overflow: hidden;
+  position: relative;
+  padding: 0 50px 10px;
+}
+
+#slider1 .viewport {
+  height: 343px;
+  overflow: hidden;
+  position: relative;
+}
+
+#slider1 .buttons {
+  background: #C01313;
+  border-radius: 35px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+#slider1 .next {
+  right: 0;
+  left: auto;
+  top: 50%;
+}
+
+#slider1 .buttons:hover {
+  color: #C01313;
+  background: #fff;
+}
+
+#slider1 .disable {
+  visibility: hidden;
+}
+
+#slider1 .overview {
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+#slider1 .overview li {
+  float: left;
+  border: 1px solid #dcdcdc;
+}
+/* Tiny Carousel 2 */
+.slider2 {
+  height: 1%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 50px 10px;
+}
+
+.slider2 .viewport {
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider2 .buttons {
+  background: #C01313;
+  border-radius: 35px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.slider2 .next {
+  right: 0;
+  left: auto;
+  top: 50%;
+}
+
+.slider2 .buttons:hover {
+  color: #C01313;
+  background: #fff;
+}
+
+.slider2 .disable {
+  visibility: hidden;
+}
+
+.slider2 .overview {
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+.slider2 .overview li {
+  float: left;
+  border: 1px solid #dcdcdc;
+  width: 250px;
+}
+.slide2 {
+  width: 250px;
+  height: 250px;
+}
+
+
+
