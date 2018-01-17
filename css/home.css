@@ -114,7 +114,7 @@ li.glyphicon {
 
 #slider1 .overview li {
   float: left;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #050000;
 }
 /* Tiny Carousel 2 */
 .slider2 {
@@ -173,12 +173,15 @@ li.glyphicon {
 
 .slider2 .overview li {
   float: left;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #050000;
   width: 250px;
 }
 .slide2 {
   width: 250px;
   height: 250px;
+}
+h2 {
+  margin: 4%;
 }
 
 
