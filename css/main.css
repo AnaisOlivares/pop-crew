@@ -9,3 +9,25 @@ body {
   font-weight: 500;
   margin: 0px;
 }
+
+.vh100 {
+  /* background: linear-gradient(to top right, rgb(0, 0, 0) 50%, rgb(63, 17, 116)); */
+  /* background-image: linear-gradient(to top right,#080513,#3f1175);
+opacity: .9; */
+
+ background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%,#080513 100%);
+ /* background: -webkit-linear-gradient(-45deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%); /* Chrome10-25,Safari5.1-6 */ */
+ /* background: linear-gradient(135deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%); */
+}
+
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  height: 100vh;
+}
+
+.scroll {
+  overflow-y: hidden;
+}
