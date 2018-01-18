@@ -49,7 +49,7 @@
                           <span class="input-group-addon none">
                             <i class="fa fa-search" aria-hidden="true"></i>
                           </span>
-                          <input type="text" class="form-control transparent border-white" id="inputGroups"  placeholder="Find Movies, Behind the scenes and more..."aria-describedby="inputGroupSuccess1Status">
+                          <input type="text" class="form-control transparent border-white" id="inputGroups"  placeholder="Find Movies, Behind the scenes and more..." aria-describedby= "inputGroupSuccess1Status">
                         </div>
                       </div>
                     </div>
@@ -76,9 +76,36 @@
         </nav>
       </header>
 
-      <section class="black info logo col-md-5 col-xs-5">
-        <h1>Nombre de película</h1>
-        <p>Lugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <section class="black info logo col-md-7 ">
+        <h1 id="title-movie"></h1>
+        <h4 id= "tagline-movie"></h4>
+        <p id='plot-movie'></p>
+        <p id='genero-movie'></p>
+        <p id='runtime-movie'></p>
+        <p id="year-movie"></p>
+      </section>
+
+      <section class="tabs">
+        
+
+        <a href="#" id="behind">Behind The Scenes</a>
+        <a href="#" id="top-scenes">Top Scenes</a>
+        <a href="#" id="cast">Cast</a>
+        <a href="#" id="review">Review</a>
+        <a href="#" id="extra">Extra</a>
+
+        <div class="cast container">
+          <div id="main-container-videos">
+            
+          </div>
+          <ul id="cast-container">
+            
+          </ul>
+          <div id="director-container">
+            
+          </div>
+        </div>
+
       </section>
 
     </div>
@@ -90,11 +117,11 @@
 
 
 
-  <script src="../../vendors/js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-  <script src="../../js/perfil.js"></script>
-  <script src="../../js/data.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="../../js/app.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,87 @@
-$(document).ready(function() {
-  setTimeout(function() {
-    window.location.href = 'views/login.html';
-  }, 3000);
+$(function () {
+  $apiKeyTdbm = '26ae59014ea0da877c1779bb203cb4da';
+  $apiLen = '&language=es-ES&include_adult=false&sort_by=created_at.asc';
+  $apiJustLen = '&language=es-ES';
+  $apiTdbm = 'https://api.themoviedb.org/3/genre/';
+  $api = 'https://api.themoviedb.org/3/';
+
+  $('.genero-movie').on('click', function (event) {
+    event.preventDefault();
+    if(window.sessionStorage){
+      sessionStorage.setItem('generoId', $(this).attr('id'));
+    }
+    document.location.href = '../search/';
+    console.log(window.location.href);
+    
+  });
+
+  if (sessionStorage.getItem('generoId')) {
+    $('#container-peliculas').html('');
+    $genreId = sessionStorage.getItem('generoId');
+    $.getJSON(($api + 'genre/' + $genreId + '/movies?api_key=' + $apiKeyTdbm + $apiLen),gotDataGenre);
+    function gotDataGenre (data) {
+      //console.log(data.results.length);
+      for (var i = 0; i < data.results.length; i++ ){
+        //console.log(data.results[i]);
+        $currentMovie = data.results[i];
+        $('#container-peliculas').append("<div id=" + $currentMovie.id + " class='movie-click'><img src= 'http://image.tmdb.org/t/p/w185/" + $currentMovie.poster_path + "  '><h2>" + $currentMovie.title + "</h2></div>")
+
+      }
+
+      $('.movie-click').on('click', function () {
+        console.log('hola');
+        if(window.sessionStorage){
+          sessionStorage.setItem('movieId', $(this).attr('id'));
+        }
+        //sessionStorage.setItem('movieId', $('.movie-click').attr('id'));
+        document.location.href = '../movie/';
+        //return false;
+      });
+
+    }
+  }
+
+  if (sessionStorage.getItem('movieId')) {
+    $idMovie = sessionStorage.getItem('movieId');
+    $.getJSON(($api + 'movie/' + $idMovie + '?api_key=' + $apiKeyTdbm + $apiJustLen),gotDataMovie);
+    function gotDataMovie (data) {
+      console.log(data);
+      $('#title-movie').text(data.title);
+      $('#tagline-movie').text(data.tagline);
+      $('#plot-movie').text(data.overview);
+      $('#genero-movie').text(data.genres[1].name);
+      $('#runtime-movie').text(data.runtime + 'min');
+      $('#year-movie').text(data.release_date);
+
+      
+      $.getJSON(($api + 'movie/' + $idMovie + '/credits?api_key=' + $apiKeyTdbm + $apiJustLen),gotCastMovie);
+      
+      function gotCastMovie ( data) {
+        //console.log(data);
+      }
+    }
+
+    $('#cast').on('click', function (event) {
+      $('#cast-container').html('');
+      $('#director-container').html('');
+      event.preventDefault();
+      $.getJSON(($api + 'movie/' + $idMovie + '/credits?api_key=' + $apiKeyTdbm + $apiJustLen), gotCastMovie);
+      function gotCastMovie (data) {
+        for (var i = 0; i < 20 ; i++) {
+          $('#cast-container').append("<li id=" + data.cast[i].id + " class='movie-single-actor'><img src= 'http://image.tmdb.org/t/p/w185/" + data.cast[i].profile_path + "  '><h2>" + data.cast[i].name + "</h2></li>")
+        }
+        $('#director-container').append("<div id=" + data.crew[0].id + " class='movie-single-director'><img src= 'http://image.tmdb.org/t/p/w185/" + data.crew[0].profile_path + "  '><h2>" + data.crew[0].name + "</h2><h4>" + data.crew[0].job + "</h4></div>");
+        console.log(data);
+      }
+
+    });
+
+  }
+
+
+
+
+
+  
+    
 });
