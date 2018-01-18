@@ -4,6 +4,7 @@ $(function () {
   $apiJustLen = '&language=es-ES';
   $apiTdbm = 'https://api.themoviedb.org/3/genre/';
   $api = 'https://api.themoviedb.org/3/';
+  $apiYoutbe = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q=';
 
   $('.genero-movie').on('click', function (event) {
     event.preventDefault();
@@ -53,22 +54,66 @@ $(function () {
       $('#runtime-movie').text(data.runtime + 'min');
       $('#year-movie').text(data.release_date);
 
+      $.getJSON(($apiYoutbe + data.original_title + 'behind the scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataBehind);
+
+      function gotDataBehind (data) {
+        console.log(data.items);
+        $.each(data.items, function (index, item) {
+          console.log(item);
+          $('#main-container-videos').append("<div class='video-behind col-md-6'> <iframe class='video' width='520' height='300' src='//www.youtube.com/embed/" + item.id.videoId + "' frameborder='0' allowfullscreen> </iframe> <h2 class='title-video'> " + item.snippet.title  + "</h2></div>") ;
+        });
       
-      $.getJSON(($api + 'movie/' + $idMovie + '/credits?api_key=' + $apiKeyTdbm + $apiJustLen),gotCastMovie);
-      
-      function gotCastMovie ( data) {
-        //console.log(data);
       }
+
+      //BEHIND THE SCENES CLICK
+      $('#behind').on('click', function (event) {
+        event.preventDefault();
+        $('#main-container-videos').html('');
+        $('#cast-container').html('');
+        $('#director-container').html('');
+        
+        $.getJSON(($apiYoutbe + data.original_title + 'behind the scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataBehind);
+
+        function gotDataBehind (data) {
+          console.log(data.items);
+          $.each(data.items, function (index, item) {
+            console.log(item);
+            $('#main-container-videos').append("<div class='video-behind col-md-6'> <iframe class='video' width='520' height='300' src='//www.youtube.com/embed/" + item.id.videoId + "' frameborder='0' allowfullscreen> </iframe> <h2 class='title-video'> " + item.snippet.title  + "</h2></div>") ;
+          });
+        }
+      });
+
+      //TOP SCENES CLICK
+      $('#top-scenes').on('click', function (event) {
+        event.preventDefault();
+        $('#main-container-videos').html('');
+        $('#cast-container').html('');
+        $('#director-container').html('');
+        
+        $.getJSON(($apiYoutbe + data.original_title + 'movie scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataScenes);
+
+        function gotDataScenes (data) {
+          console.log(data.items);
+          $.each(data.items, function (index, item) {
+            console.log(item);
+            $('#main-container-videos').append("<div class='video-behind col-md-6'> <iframe class='video' width='520' height='300' src='//www.youtube.com/embed/" + item.id.videoId + "' frameborder='0' allowfullscreen> </iframe> <h2 class='title-video'> " + item.snippet.title  + "</h2></div>") ;
+          });
+        }
+      });
+
+
     }
 
+    //CAST COMPLETO CLICK
     $('#cast').on('click', function (event) {
+      $('#main-container-videos').html('');
       $('#cast-container').html('');
       $('#director-container').html('');
       event.preventDefault();
       $.getJSON(($api + 'movie/' + $idMovie + '/credits?api_key=' + $apiKeyTdbm + $apiJustLen), gotCastMovie);
       function gotCastMovie (data) {
-        for (var i = 0; i < 20 ; i++) {
-          $('#cast-container').append("<li id=" + data.cast[i].id + " class='movie-single-actor'><img src= 'http://image.tmdb.org/t/p/w185/" + data.cast[i].profile_path + "  '><h2>" + data.cast[i].name + "</h2></li>")
+        for (var i = 0; i < 10 ; i++) {
+          $('#cast-container').append("<li id=" + data.cast[i].id + " class='movie-single-actor col-md-4'><img src= 'http://image.tmdb.org/t/p/w185/" + data.cast[i].profile_path + "  '><h2>" + data.cast[i].name + "</h2></li>")
         }
         $('#director-container').append("<div id=" + data.crew[0].id + " class='movie-single-director'><img src= 'http://image.tmdb.org/t/p/w185/" + data.crew[0].profile_path + "  '><h2>" + data.crew[0].name + "</h2><h4>" + data.crew[0].job + "</h4></div>");
         console.log(data);
