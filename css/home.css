@@ -191,7 +191,10 @@ h2 {
   font-size: 24px;
   text-align: center;
   width: 185px;
-
+}
+.movie-click img {
+  width: 185px;
+  height: 278px;
 }
 
 
