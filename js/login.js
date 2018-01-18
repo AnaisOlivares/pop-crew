@@ -134,7 +134,7 @@ $(document).ready(function() {
 
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        $(location).attr('href', 'home/index.html');
+        $(location).attr('href', '../home/index.html');
       }
     });
   });
@@ -143,7 +143,6 @@ $(document).ready(function() {
   // Login con Google
   var provider = new firebase.auth.GoogleAuthProvider();
   $('.btn-google').on('click', function() {
-    event.preventDefault();
     firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
 
@@ -154,7 +153,6 @@ $(document).ready(function() {
         email: user.email,
         uid: user.uid,
         profilePhoto: user.photoURL,
-        posterPhoto: 'NONE'
       }).then(
         user => {
           $(location).attr('href', '../home/index.html');
@@ -167,9 +165,9 @@ $(document).ready(function() {
     });
   });
   
+  // login facebook
   var providerFacebook = new firebase.auth.FacebookAuthProvider();
   $('.btn-facebook').on('click', function() {
-    event.preventDefault();
     firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
       var token = result.credential.accessToken;
 
@@ -180,7 +178,6 @@ $(document).ready(function() {
         email: user.email,
         uid: user.uid,
         profilePhoto: user.photoURL,
-        posterPhoto: 'NONE'
       }).then(
         user => {
           $(location).attr('href', '../home/index.html');
@@ -195,7 +192,7 @@ $(document).ready(function() {
   
   $('.close').click(function() {
     firebase.auth().signOut().then(function() {
-      $(location).attr('href', '../login.html');
+      $(location).attr('href', '../login/login.html');
     }).catch(function(error) {
     // An error happened.
 

@@ -1,56 +1,48 @@
 .bg {
   background:linear-gradient(to right, rgb(12, 12, 12), rgb(43, 2, 39));
 }
-
-.navbar {
-  background-color:white;
-  font-size: 20px;
-  margin-bottom: 0;
-  border: none;
-  border-bottom: 1px solid white;
-}
-.logo {
-  margin-top: 12%;
-}
-.collapse {
-  margin-top: 2%;
+/* navbar*/
+header {
+  height: 80px;
 }
 .container-fluid {
   margin-bottom: 20px;
 }
-.search-bar {
-  margin-left: 15%;
-  display: inline;
+.logo {
+  padding: 10px;
 }
-/*input*/
-.form-control {
-  display: inline;
-  width: 20%;
-}
-#search-input {
-  border: none;
-}
-.nav {
-  margin-right: 15%;
-}
-#premium {
-  font-size: 20px;
-  border-radius: 20px;
+span.input-group-addon.none {
+  background: none;
+  color: white;
   border: 1px solid white;
 }
-li.glyphicon {
-  margin-left: 3%;
-  
+
+.black {
+  color: black;
 }
 
-.bell {
-  position: relative;
-  left: 40px;
-  margin-top: 6px;
+#inputGroups {
+  border: 1px solid white;
 }
-.usuario {
-  margin-left: 35px;
-  margin-top: -7%;
+
+.btn {
+  margin: 10px;
+  border-radius: 14%;
+  border: 1px solid white;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.menu {
+  padding: 2px 40px;
+  padding-top: 8px;
+  background: rgba(63, 43, 52, 0.8);
 }
 
 /* Tiny Carousel */
@@ -117,12 +109,7 @@ li.glyphicon {
   border: 1px solid #050000;
 }
 
- /* .caption {
-  position: absolute;
-  
-  color: rgb(43, 2, 39);
-} */
-/* Tiny Carousel 2 */
+/* Tiny Carousel 2 y 3*/
 .slider2 {
   height: 1%;
   overflow: hidden;
@@ -186,8 +173,25 @@ li.glyphicon {
   width: 250px;
   height: 250px;
 }
-h2 {
+.title {
   margin: 4%;
+}
+
+/* css de search  container*/
+
+#container-peliculas {
+  margin: 30px 20px;
+}
+.movie-click {
+  float: left;
+  margin-left: 30px;
+  height: 75vh;
+}
+h2 {
+  font-size: 24px;
+  text-align: center;
+  width: 185px;
+
 }
 
 

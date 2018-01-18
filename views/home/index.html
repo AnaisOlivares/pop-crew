@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,36 +14,57 @@
   <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body class="bg">
-<header>
-  <nav class="navbar navbar-default bg">
-    <div class="container-fluid">
-  <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <span id='show-menu'><i class="fa fa-align-justify"></i></span>
-        <img class="logo" src="../../assets/images/logooficial.png" alt="">
+  <header>
+    <nav class="navbar navbar-fixed-top transparent">
+      <div class="container-fluid menu">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed hamburguer" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../discover/index.html">
+        <i class="fa fa-bars white" aria-hidden="true"></i>
+        <img class="logo" src="../../assets/images/logooficial.png" alt="logo">
+      </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse container" id="bs-example-navbar-collapse-1">
+          <form class="">
+            <div class="">
+              <div class="row search col-md-6 col-md-push-1 logo">
+                <div class="form-group has-success has-feedback ">
+                  <div class="input-group">
+                    <span class="input-group-addon none">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control transparent border-white" id="inputGroups"  placeholder="Find Movies, Behind the scenes and more..."aria-describedby="inputGroupSuccess1Status">
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+          </form>
+           <ul class="nav navbar-nav navbar-right">
+            <li>
+              <button type="button" class="btn transparent logo" name="button">PREMIUM</button>
+            </li>
+            <li>
+              <a href="../live/index.html"><i class="fa fa-bell-o logo white" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="circle logo">
+              <a href="../live/index.html"><div class="logo">
+              </div>
+              </a>
+            </li>
+          </ul>
         </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="search-bar">
-          <i href="#" class="glyphicon glyphicon-search" aria-hidden="true"></i>
-          <input id="search-input" class=" form-control bg" type="text" name ="search"  aria-describedby="inputGroupSuccess3Status" placeholder="Find Movies, shows, celebrieties and more">
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><button id="premium" class="bg" type="button" class="btn btn-default ">Premium</button></li>
-          <li><i class="glyphicon glyphicon-bell bell"  aria-hidden="true"></i></li>
-          <li><a class="usuario" href="#">Usuario</a></li>
-          
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-</header>
+      </div>
+    </nav>
+  </header>
 
 <aside>
   <ul class="col-md-6">
@@ -71,16 +91,7 @@
 </aside>
 
 <section>
-  <!-- <div class="col-xs-5 col-sm-4 col-md-4">
-    <div id="carousel">
-      <ul>
-        <li><img class="slider" src="https://i.ytimg.com/vi/xmQYH5p4-rE/maxresdefault.jpg" alt=""></li>
-        <li><img class="slider" src="https://i.ytimg.com/vi/xmQYH5p4-rE/maxresdefault.jpg" alt=""></li>
-        <li><img class="slider" src="https://i.ytimg.com/vi/xmQYH5p4-rE/maxresdefault.jpg" alt=""></li>
-     </ul>
-    </div>
-  </div> -->
-  <div id="slider1">
+   <div id="slider1">
       <a class="buttons prev" href="#">&#60;</a>
       <div class="viewport">
         <ul class="overview">
@@ -95,7 +106,7 @@
     </div>
 </section>
 <section>
-  <h2>Cartelera</h2>
+  <h2 class="title">Cartelera</h2>
   <div class="slider2">
       <a class="buttons prev" href="#">&#60;</a>
       <div class="viewport">
@@ -116,7 +127,7 @@
       </div>
       <a class="buttons next" href="#">&#62;</a>
     </div>
-    <h2>Tendencia</h2>
+    <h2 class="title">Tendencia</h2>
     <div class="slider2">
         <a class="buttons prev" href="#">&#60;</a>
         <div class="viewport">
