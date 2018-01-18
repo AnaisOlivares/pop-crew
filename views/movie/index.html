@@ -12,13 +12,14 @@
   <title>Perfil</title>
 </head>
 
-<body>
+<body class="background-1">
+<div class="overlay">
 
-  <div class="background-1">
-    <div class="overlay">
+  <div class="container-fluid">
+    <div class="row">
       <header>
         <nav class="navbar navbar-fixed-top transparent">
-          <div class="container-fluid menu">
+          <div class="container-fluid menu navbar-fixed">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed hamburguer" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -32,31 +33,23 @@
             <img class="logo" src="../../assets/images/logooficial.png" alt="logo">
             </a>
             </div>
-
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse container" id="bs-example-navbar-collapse-1">
               <form class="">
-                <!-- <div class="form-group"> -->
-                  <!-- <i class="fa fa-search" aria-hidden="true"></i>
-                  <input type="text" class="form-control transparent" placeholder="Find Movies, Shows, Celebrities and more"> -->
-
-                  <div class="">
-                    <div class="row search col-md-6 col-md-push-1 logo">
-
-                      <div class="form-group has-success has-feedback ">
-                        <div class="input-group">
-                          <span class="input-group-addon none">
+                <div class="">
+                  <div class="row search col-md-6 col-md-push-1 logo">
+                    <div class="form-group has-success has-feedback ">
+                      <div class="input-group">
+                        <span class="input-group-addon none">
                             <i class="fa fa-search" aria-hidden="true"></i>
                           </span>
-                          <input type="text" class="form-control transparent border-white" id="inputGroups"  placeholder="Find Movies, Behind the scenes and more..." aria-describedby= "inputGroupSuccess1Status">
-                        </div>
+                        <input type="text" class="form-control transparent border-white" id="inputGroups" placeholder="Find Movies, Behind the scenes and more..." aria-describedby="inputGroupSuccess1Status">
                       </div>
                     </div>
                   </div>
+                </div>
                 <!-- </div> -->
               </form>
-
               <ul class="nav navbar-nav navbar-right">
                 <li>
                   <button type="button" class="btn transparent logo" name="button">PREMIUM</button>
@@ -66,8 +59,9 @@
                   </a>
                 </li>
                 <li class="circle logo">
-                  <a href="../live/index.html"><div class="logo">
-                  </div>
+                  <a href="../live/index.html">
+                    <div class="logo">
+                    </div>
                   </a>
                 </li>
               </ul>
@@ -75,52 +69,89 @@
           </div>
         </nav>
       </header>
+      <!-- <div class="container-fluid">
+        <div class="row col-md-12"> -->
 
-      <section class="black info logo col-md-7 ">
-        <h1 id="title-movie"></h1>
-        <h4 id= "tagline-movie"></h4>
-        <p id='plot-movie'></p>
-        <p id='genero-movie'></p>
-        <p id='runtime-movie'></p>
-        <p id="year-movie"></p>
-      </section>
+      <!-- <section class="black info logo col-md-7">
+            <h1 id="title-movie" class="title-movie white"></h1>
+            <h4 id="tagline-movie" class="white"></h4>
+            <p id='plot-movie' class="white"></p>
+            <p id='genero-movie' class="white"></p>
+            <p id='runtime-movie' class="white"></p>
+            <p id="year-movie" class="white"></p>
 
-      <section class="tabs">
-        
 
-        <a href="#" id="behind">Behind The Scenes</a>
-        <a href="#" id="top-scenes">Top Scenes</a>
-        <a href="#" id="cast">Cast</a>
-        <a href="#" id="review">Review</a>
-        <a href="#" id="extra">Extra</a>
+          </section>
+          <div class="portada col-md-5 col-md-push-0">
+            <img class="img-responsive" src="../../assets/images/1.jpg" alt="">
+          </div>
+          <section class="">
+            <ul class="local-menu col-md-8 col-md-push-3">
+              <li><a href="#" class="filters" id="behind">Behind The Scenes</a></li>
+              <li><a href="#" class="filters" id="top-scenes">Top Scenes</a>
+              </li>
+              <li><a href="#" class="filters" id="cast">Cast</a>
+              </li>
+              <li> <a href="#" class="filters" id="review">Review</a>
+              </li>
+              <li> <a href="#" class="filters" id="extra">Extra</a>
+              </li>
+            </ul>
+          </section> -->
 
-        <div class="cast container">
-          <div id="main-container-videos">
-            
+      <div class="container-fluid background-1">
+        <div class="row overlay">
+          <section class="black info logo col-md-7">
+            <h1 id="title-movie" class="title-movie white"></h1>
+            <h4 id="tagline-movie" class="white"></h4>
+            <p id='plot-movie' class="white"></p>
+            <p id='genero-movie' class="white"></p>
+            <p id='runtime-movie' class="white"></p>
+            <p id="year-movie" class="white"></p>
+
+
+          </section>
+          <div class="portada col-md-4 col-md-push-0">
+            <img class="img-responsive" src="../../assets/images/1.jpg" alt="">
+          </div>
+          <section class="">
+            <ul class="local-menu col-md-8 col-md-push-3">
+              <li><a href="#" class="filters" id="behind">Behind The Scenes</a></li>
+              <li><a href="#" class="filters" id="top-scenes">Top Scenes</a>
+              </li>
+              <li><a href="#" class="filters" id="cast">Cast</a>
+              </li>
+              <li> <a href="#" class="filters" id="review">Review</a>
+              </li>
+              <li> <a href="#" class="filters" id="extra">Extra</a>
+              </li>
+            </ul>
+
+            <div id="main-container-videos">
+            </div>
+            <ul id="cast-container" class="col-md-12">
+            </ul>
+            <div id="director-container">
+            </div>
+          </section>
+
+          <!-- <div id="main-container-videos">
           </div>
           <ul id="cast-container">
-            
           </ul>
           <div id="director-container">
-            
-          </div>
+          </div> -->
+
         </div>
-
-      </section>
-
+      </div>
     </div>
-    <!-- <section class="black info logo">
-      <h1>Nombre de película</h1>
-      <p>Lorem ipsum dolor sit veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section> -->
   </div>
+</div>
 
+  <!-- </div>
+  </div> -->
 
-
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="../../js/app.js"></script>
 </body>
 
