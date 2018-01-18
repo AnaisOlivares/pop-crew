@@ -73,15 +73,18 @@ $(function () {
         $('#director-container').append("<div id=" + data.crew[0].id + " class='movie-single-director'><img src= 'http://image.tmdb.org/t/p/w185/" + data.crew[0].profile_path + "  '><h2>" + data.crew[0].name + "</h2><h4>" + data.crew[0].job + "</h4></div>");
         console.log(data);
       }
-
     });
-
   }
 
-
-
-
-
-  
-    
+  /* estilos de menu de lista de generos */
+  $('#btnSlide').click(function() {
+    $("#slideIzq").removeClass('hiden');
+    $("#slideIzq").animate({
+      width: "toggle"
+        /*
+        width: "show"
+        width: "hide"
+        */
+    });
+  });  
 });

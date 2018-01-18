@@ -189,6 +189,40 @@ $(document).ready(function() {
       var credential = error.credential;
     });
   });
+
+  function observer() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      // var $photoProfile = $('#photoProfile');
+      // var $nameUsers = $('#nameUsers');
+      var $usersComent = $('.usersComent');
+      var $comentsPhoto = $('.comentsPhoto');
+      var $usersEmail = $('.usersEmail');
+
+    if (user) {
+      console.log('usuario activo');
+      var displayName = user.displayName;
+      localStorage.displayName = user.displayName;
+      var email = user.email;
+      console.log(email);
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      console.log(photoURL);
+
+      localStorage.photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+
+      $comentsPhoto.attr('src', photoURL);
+      $usersComent.text(displayName);
+      $usersEmail.text(email);
+
+    } else {
+      console.log('no existe usuario activo');
+    }
+  });
+}
+observer();
   
   $('.close').click(function() {
     firebase.auth().signOut().then(function() {

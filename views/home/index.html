@@ -10,10 +10,9 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   
   <link rel="stylesheet" href="../../css/home.css">
-  <link rel="stylesheet" href="../../css/animate.css">
   <link rel="stylesheet" href="../../css/main.css">
 </head>
-<body class="bg">
+<body class="bg contenedor">
   <header>
     <nav class="navbar navbar-fixed-top transparent">
       <div class="container-fluid menu">
@@ -25,10 +24,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../discover/index.html">
-        <i class="fa fa-bars white" aria-hidden="true"></i>
-        <img class="logo" src="../../assets/images/logooficial.png" alt="logo">
-      </a>
+      <a href="#" id="btnSlide"><i class="fa fa-bars white" aria-hidden="true"></i></a>
+      <img class="logo" src="../../assets/images/logooficial.png" alt="logo">
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse container" id="bs-example-navbar-collapse-1">
@@ -52,13 +49,10 @@
               <button type="button" class="btn transparent logo" name="button">PREMIUM</button>
             </li>
             <li>
-              <a href="../live/index.html"><i class="fa fa-bell-o logo white" aria-hidden="true"></i>
-              </a>
+              <a href="#"><i class="fa fa-bell-o logo white" aria-hidden="true"></i></a>
             </li>
-            <li class="circle logo">
-              <a href="../live/index.html"><div class="logo">
-              </div>
-              </a>
+            <li>
+              <img class="circle comentsPhoto">
             </li>
           </ul>
         </div>
@@ -66,30 +60,36 @@
     </nav>
   </header>
 
-<aside>
+<aside id="slideIzq" class="hiden">
   <ul class="col-md-6">
-    <li class="col-md-6"><a href="" class="genero-movie" id="28">Acción</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="12">Aventura</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="16">Animación</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="35">Comedia</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="80">Crimen</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="99">Documental</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="18">Drama</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="10751">Familiar</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="14">Fantasía</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="36">Historia</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="27">Terror</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="10402">Música</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="9648">Misterio</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="10749">Romance</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="878">Ciencia Ficción</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="10770">Series</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="53">Suspenso</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="10752">Guerra</a></li>
-    <li class="col-md-6"><a href="" class="genero-movie" id="37">Western</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="28">Acción</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="12">Aventura</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="16">Animación</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="35">Comedia</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="80">Crimen</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="99">Documental</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="18">Drama</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="10751">Familiar</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="14">Fantasía</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="36">Historia</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="27">Terror</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="10402">Música</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="9648">Misterio</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="10749">Romance</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="878">C.Ficción</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="10770">Series</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="53">Suspenso</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="10752">Guerra</a></li>
+    <li class="col-md-12"><a href="" class="genero-movie" id="37">Western</a></li>
   </ul>
 </aside>
-
+<div class="profile col-md-6 hiden">
+    <div>
+      <span><img class="circle comentsPhoto"></span>
+      <span class="usersComent"></span><br>
+      <span class="usersEmail"></span>
+    </div>
+</div>
 <section>
    <div id="slider1">
       <a class="buttons prev" href="#">&#60;</a>
@@ -160,6 +160,7 @@
   <script src="../../vendors/js/slick.min.js"></script>
   <script src="../../js/home.js"></script>
   <script src="../../js/app.js"></script>
+  <script src="../../js/login.js"></script>
 </body>
 
 </html>

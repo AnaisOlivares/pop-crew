@@ -35,14 +35,15 @@ span.input-group-addon.none {
   height: 50px;
   width: 50px;
   border: 1px solid white;
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 50%;
 }
 
 .menu {
   padding: 2px 40px;
   padding-top: 8px;
-  background: rgba(63, 43, 52, 0.8);
+  background: linear-gradient(to right , rgb(63, 43, 52)70%, rgb(2, 9, 31));
+  
 }
 
 /* Tiny Carousel */
@@ -195,4 +196,36 @@ h2 {
 }
 
 
+/* estilos de menu de lista de generos */
+.contenedor{
+  width:100%;
+  position: relative;
+}
+
+#slideIzq{
+  position: absolute;
+  z-index: 99999;
+  padding-left: 14px;
+  background: linear-gradient(to bottom , rgba(63, 43, 52, 0.952)10%, rgba(4, 18, 58, 0.472));
+  width: 20%;
+  left:0;  /*se oculta por la izquierda*/
+  /*right: 0;  se oculta por la derecha */
+}
+
+li.col-md-12 {
+  list-style: none;
+}
+
+a.genero-movie {
+  color: white;
+  font-weight: 700;
+}
+
+a.genero-movie:hover {
+  color: rgba(240, 53, 53, 0.589);
+  font-size: 24px;
+}
+.hiden {
+  display: none;
+}
 

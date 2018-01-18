@@ -79,14 +79,14 @@ span.input-group-addon.none {
   height: 50px;
   width: 50px;
   border: 1px solid white;
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 50%;
 }
 
 .menu {
   padding: 2px 40px;
   padding-top: 8px;
-  background: rgba(63, 43, 52, 0.8);
+  background: linear-gradient(to right , rgb(63, 43, 52)70%, rgb(2, 9, 31));
 }
 
 .info {
