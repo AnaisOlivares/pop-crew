@@ -35,20 +35,22 @@ body {
 }
 
 .background-1 {
-  background-image: url(../assets/images/1.jpg);
+  background-image: url(../assets/images/fon1.jpg);
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   background-position: center top;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 
 .overlay {
   background: rgba(61, 9, 76, 0.6);
-  height: 90vh;
+  height: fit-content;
+
 }
 
 .transparent {
   background: transparent;
+  margin: 0px;
 }
 
 .white {
@@ -90,5 +92,45 @@ span.input-group-addon.none {
 }
 
 .info {
-  padding: 150px;
+  padding: 65px;
+  margin-top: 66px;
+}
+
+.tabs {
+  /* background-color: red; */
+  position: relative;
+  /* top: 300px; */
+  height: fit-content;
+}
+
+.local-menu {
+  display: inline-flex;
+  font-size: 26px;
+  list-style: none;
+  bottom: 27px;
+position: relative;
+}
+
+.filters {
+  color: white;
+  text-transform: uppercase;
+  margin: 10px;
+  padding: 10px;
+}
+
+#plot-movie {
+  font-size: 18px;
+}
+
+.portada {
+  margin-top: 14%;
+}
+
+.movie-single-actor img {
+  border-radius: 100%;
+  padding: 7px;
+}
+
+li {
+  list-style: none;
 }
