@@ -173,7 +173,6 @@ $(function () {
         width: "hide"
         */
     });
-<<<<<<< HEAD
   }); 
   
   $('#btn-profile').on('click',function(event){
@@ -181,7 +180,4 @@ $(function () {
     $('.slide-profile').toggleClass('hiden');
   })
 });
-=======
-  });
-});
->>>>>>> f658ace94c4916e2190ec76eeedea247a56872e4
+  
