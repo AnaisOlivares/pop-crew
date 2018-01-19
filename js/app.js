@@ -5,8 +5,9 @@ $(function () {
   $apiTdbm = 'https://api.themoviedb.org/3/genre/';
   $api = 'https://api.themoviedb.org/3/';
   $apiYoutbe = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q=';
+  $apiYoutbe2 = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=';
   $apiSpotify = 'https://api.spotify.com/v1/search?q='
-  $tokenSpotify = ' -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQBqWiO870NHEsnZ5c9dvidcNXZynYxlwRWF_xAzxuWuHsnRqLwvKP_3RHPVEtyEVU_6kQHHbuN3ScRlPEW8641XudqqLM2IsLowRoBJvSEM348tvlGKC-l-2TFzUNZKL1FbPDNwEktR4Jw3"'
+  $tokenSpotify = ' -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQASB8aJXldF9MA0ZoM71o2h4AreaIiBezNIrcGxFTS8VXPoI71Ry"'
 
   $('.genero-movie').on('click', function (event) {
     event.preventDefault();
@@ -108,10 +109,19 @@ $(function () {
 
       //SPOTIFY CLICK
       $('#extra').on('click', function () {
-        $.getJSON(($apiSpotify + data.original_title + 'movie soundtrack' + '&type=playlist' + $tokenSpotify), gotPlaylist);
+        event.preventDefault();
+        $('#main-container-videos').html('');
+        $('#cast-container').html('');
+        $('#director-container').html('');
+        $('#review-container').removeClass('d-block');
+        
+        $.getJSON(($apiYoutbe2 + data.original_title + 'original full soundtrack' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotSoundtrack);
 
-        function gotPlaylist (data) {
-          console.log(data);
+        function gotSoundtrack (data) {
+          $.each(data.items, function (index, item) {
+            console.log(item);
+            $('#main-container-videos').append("<div class='video-behind col-md-6'> <iframe class='video' width='520' height='300' src='//www.youtube.com/embed/" + item.id.videoId + "' frameborder='0' allowfullscreen> </iframe> <h2 class='title-video col-md-6 col-md-push-2'> " + item.snippet.title  + "</h2></div>") ;
+          });
         }
 
       });
