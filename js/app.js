@@ -1,6 +1,4 @@
 $(function () {
-
-
   $apiKeyTdbm = '26ae59014ea0da877c1779bb203cb4da';
   $apiLen = '&language=es-ES&include_adult=false&sort_by=created_at.asc';
   $apiJustLen = '&language=es-ES';
@@ -146,23 +144,54 @@ $(function () {
             var user = firebase.auth().currentUser;
             if($('#input-review').val() !== '' ){
               console.log('hola');
-
               var newPost = {
                 name: user.displayName,
                 message: $('#input-review').val()
               };
-
               firebase.database().ref('posts/').push(newPost);
             }
           }
         });
       });
-
     });
 
-  }
+  
 
-  /* estilos de menu de lista de generos */
+  }
+  
+  
+    // Firebase
+    var database = firebase.database();
+    var storage = firebase.storage();
+    var reference = database.ref('users');
+    var referencePost = database.ref('posts');
+  // Función postear 
+
+  $('#submit-review').on('click', function() {
+    var textPost = $('#input-review').val();
+    var boxPost = $('#responses');
+    $('#submit-review').attr('disabled', false);
+    boxPost.prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
+    '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg" aria-hidden="true"></i></div></div>');
+    
+  });
+
+  referencePost.on('value', function(datos) {
+    // newPost.remove();
+    posts = datos.val();
+    // Recorremos todos los post y los mostramos
+    $.each(posts, function(indice, valor) {
+      if(users) {
+      $('#responses').prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
+      '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg logo" aria-hidden="true"></i></div></div>');
+      }
+    });
+  }, function(objetoError) {
+    console.log('Error de lectura:' + objetoError.code);
+  });
+
+
+  /* mostrar menu de lista de generos */
   $('#btnSlide').on('click',function(event) {
     event.preventDefault();
     $("#slideIzq").removeClass('hiden');
@@ -175,9 +204,22 @@ $(function () {
     });
   }); 
   
+  // funcion de mostrar cerrar sesion
   $('#btn-profile').on('click',function(event){
     event.preventDefault();
     $('.slide-profile').toggleClass('hiden');
   })
+  
+  // funcion agregar favoritos
+  $('#favorito').on('click',function(){
+    $('.icon-favorito').addClass('red');
+    $('.add-favorito').append('<p><span><i class="fa fa-film" aria-hidden="true"></i>&nbsp&nbsp'+$('#title-movie').html()+'</span></p>');
+  });
+  
+  $('#i-favorito').on('click',function(event){
+    event.preventDefault();
+    $('.add-favorito').toggleClass('hiden');
+  })
+
 });
   

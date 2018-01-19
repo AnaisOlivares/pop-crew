@@ -19,7 +19,7 @@
 }
 
 .bg-log {
-  background-image: url('../assets/images/fon1.jpg');
+  background-image:url(../assets/images/fondo5.jpg);
   background-size: cover;
   font-size: 16px;
   width: 100%;
@@ -46,6 +46,17 @@
 
 .img-log {
   width: 60px;
+}
+
+.left {
+  float: right;
+  position: absolute;
+  left: 18%;
+
+}
+
+.logito {
+  width: 180px;
 }
 
 @media (min-width: 970px) {
