@@ -3,6 +3,9 @@ $(document).ready(function()
   $('#slider1').tinycarousel();
   $('.slider2').tinycarousel()
 
+  $('.carousel').carousel({
+    interval: 2000
+  })
   // $('#slick1').slick({
   //   slidesToShow: 2,
   //   slidesToScroll: 1,
