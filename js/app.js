@@ -102,8 +102,6 @@ $(function () {
           });
         }
       });
-
-
     }
 
     //CAST COMPLETO CLICK
@@ -144,9 +142,9 @@ $(function () {
         $postConent = $elemento.message;
         $userPhoto = $elemento.photo;
 
-        $thisPost = "<div class='single-response'><img class='user-img' src=" + $userPhoto + "> <div class='content-review'><p>" + $elemento.message + "</p></div></div>";
-
+        $thisPost = "<br><div class='single-response col-md-8 col-md-push-4'><img class='user-img' src=" + $userPhoto + "><div class='content-review'><p>" + $elemento.message + "</p></div></div>";
         $('#responses').prepend($thisPost);
+        $('.user-img').css("width:50px");
       });
 
 
@@ -165,48 +163,12 @@ $(function () {
                 message: $('#input-review').val()
               };
               firebase.database().ref('posts/').push(newPost);
-              
             }
           }
         });
       });
     });
-
-  
-
   }
-  
-  
-    // Firebase
-    // var database = firebase.database();
-    // var storage = firebase.storage();
-    // var reference = database.ref('users');
-    // var referencePost = database.ref('posts');
-  // Función postear 
-
-  // $('#submit-review').on('click', function() {
-  //   var textPost = $('#input-review').val();
-  //   var boxPost = $('#responses');
-  //   $('#submit-review').attr('disabled', false);
-  //   boxPost.prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
-  //   '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg" aria-hidden="true"></i></div></div>');
-    
-  // });
-
-  // referencePost.on('value', function(datos) {
-    // newPost.remove();
-    // posts = datos.val();
-    // Recorremos todos los post y los mostramos
-  //   $.each(posts, function(indice, valor) {
-  //     if(users) {
-  //     $('#responses').prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
-  //     '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg logo" aria-hidden="true"></i></div></div>');
-  //     }
-  //   });
-  // }, function(objetoError) {
-  //   console.log('Error de lectura:' + objetoError.code);
-  // });
-
 
   /* mostrar menu de lista de generos */
   $('#btnSlide').on('click',function(event) {
