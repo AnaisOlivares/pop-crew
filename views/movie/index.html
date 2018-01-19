@@ -145,14 +145,20 @@
               <div id="director-container" class="row col-md-1 col-md-offset-5">
               </div>
 
+              <div class="row col-md-12">
 
-              <div id="review-container" class="d-none">
-                <label for="review">Cuéntanos tu opinión sobre esta película</label>
-                <textarea name="text" placeholder="¿Qué te pareció?" id='input-review' cols="30" rows="10"></textarea>
-                <button type="button" class="btn" id="submit-review">Enviar</button>
+                <div id="review-container" class="d-none col-md-8 col-md-push-4">
+                  <label class="col-md-10 col-md-push-1 logo" for="review">Cuéntanos tu opinión sobre esta película</label>
+                  <textarea name="text" placeholder="¿Qué te pareció?" id='input-review' class="col-md-8 black" autofocus cols="30" rows="5"></textarea>
+                  <button type="button" class="btn col-md-1 portada black" id="submit-review">Enviar</button>
+                </div>
+
                 <div id="responses">
                 </div>
+                <!-- </div> -->
               </div>
+
+
             </section>
 
 
@@ -161,12 +167,9 @@
       </div>
     </div>
 
-   </div>
-  
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script src="../../js/login.js"></script>
   <script src="../../js/app.js"></script>
