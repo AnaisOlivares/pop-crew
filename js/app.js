@@ -137,18 +137,35 @@ $(function () {
         console.log(data);
       }
 
+      firebase.database().ref('posts').on('child_added', function(snapshot) {
+        $thisPost = '';
+        $elemento = snapshot.val();
+        $userName = $elemento.name;
+        $postConent = $elemento.message;
+        $userPhoto = $elemento.photo;
+
+        $thisPost = "<div class='single-response'><img class='user-img' src=" + $userPhoto + "> <div class='content-review'><p>" + $elemento.message + "</p></div></div>";
+
+        $('#responses').prepend($thisPost);
+      });
+
+
       $('#submit-review').on('click', function () {
         console.log($('#input-review').val());
+        
         firebase.auth().onAuthStateChanged( function(user) {
           if(user) {
             var user = firebase.auth().currentUser;
             if($('#input-review').val() !== '' ){
               console.log('hola');
+              // $('#responses').prepend("<img class='user-img' src=" + user.photoURL + "> <div class='content-review'><p>" + $('#input-review').val() + "</p></div>" );
               var newPost = {
                 name: user.displayName,
+                photo: user.photoURL,
                 message: $('#input-review').val()
               };
               firebase.database().ref('posts/').push(newPost);
+              
             }
           }
         });
@@ -161,20 +178,20 @@ $(function () {
   
   
     // Firebase
-    var database = firebase.database();
-    var storage = firebase.storage();
-    var reference = database.ref('users');
-    var referencePost = database.ref('posts');
+    // var database = firebase.database();
+    // var storage = firebase.storage();
+    // var reference = database.ref('users');
+    // var referencePost = database.ref('posts');
   // Función postear 
 
-  $('#submit-review').on('click', function() {
-    var textPost = $('#input-review').val();
-    var boxPost = $('#responses');
-    $('#submit-review').attr('disabled', false);
-    boxPost.prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
-    '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg" aria-hidden="true"></i></div></div>');
+  // $('#submit-review').on('click', function() {
+  //   var textPost = $('#input-review').val();
+  //   var boxPost = $('#responses');
+  //   $('#submit-review').attr('disabled', false);
+  //   boxPost.prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
+  //   '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg" aria-hidden="true"></i></div></div>');
     
-  });
+  // });
 
   referencePost.on('value', function(datos) {
     // newPost.remove();

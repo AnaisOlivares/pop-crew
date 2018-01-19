@@ -130,13 +130,13 @@ li a {
 li a:hover {
   background-color: transparent !important;
 }
+
 .d-none{
   display: none;
 }
-.d-block{
+.d-block {
   display: block!important;
 }
-
 
 .navbar-nav>li>a {
   padding-bottom: 0px;
