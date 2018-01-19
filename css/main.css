@@ -165,16 +165,23 @@ p {
 #input-respuestas {
   position: absolute;
   left: 27%;
+  top: 34px;
   z-index: 999;
   background: linear-gradient(to right, rgb(94, 61, 77)50%, rgb(31, 5, 37), rgb(2, 9, 31));
   /* padding: 22px; */
 }
 .movie-click-main {
-  padding: 20px;
+  padding: 5px 20px;
   transition: 0.2s;
 }
 .movie-click-main:hover {
   background-color: white;
   color: black;
   margin: 0px;
+  height: fit-content;
+}
+
+.movie-click-main h3 {
+  margin: 0px;
+  font-size: 14px;
 }
