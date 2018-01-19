@@ -119,8 +119,7 @@ $(function () {
 
     }
 
-    https://api.themoviedb.org/3/search/movie?api_key=26ae59014ea0da877c1779bb203cb4da&language=es-ES&query=titanic&page=1&include_adult=false
-
+    
     $('#inputGroups').on('keypress', function() {
         $('#input-respuestas').html('');
         if($(this).val()==''){
