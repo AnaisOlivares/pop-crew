@@ -288,5 +288,11 @@ a.genero-movie:hover {
 }
 
 .center {
-  text-align: center;
+  display: inline-flex;
+  margin-top: 450px;
+}
+.center1 {
+  margin-left: 35%;
+  display: inline-flex;
+  margin-top: 450px;
 }

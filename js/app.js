@@ -238,5 +238,20 @@ $(function () {
     $('.add-favorito').toggleClass('hiden');
   })
 
+  var menuSearch = $('.genero-movie');
+  $('.genero-movie').on('click', function() {
+   
+    $('#container-peliculas').append('h2');
+    $('h2').prependTo()  
+      $(".genero-movie").each(function(i){
+        $(this).attr("title");
+        $('#container-peliculas').show();
+     });
+    
+    
+   
+
+  })
+
 });
   
