@@ -135,7 +135,9 @@ li {
   list-style: none;
 }
 
-
+.d-none{
+  display: none;
+}
 .d-block {
   display: block!important;
 }

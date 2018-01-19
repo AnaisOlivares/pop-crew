@@ -139,20 +139,36 @@ $(function () {
         console.log(data);
       }
 
+      firebase.database().ref('posts').on('child_added', function(snapshot) {
+        $thisPost = '';
+        $elemento = snapshot.val();
+        $userName = $elemento.name;
+        $postConent = $elemento.message;
+        $userPhoto = $elemento.photo;
+
+        $thisPost = "<div class='single-response'><img class='user-img' src=" + $userPhoto + "> <div class='content-review'><p>" + $elemento.message + "</p></div></div>";
+
+        $('#responses').prepend($thisPost);
+      });
+
+
       $('#submit-review').on('click', function () {
         console.log($('#input-review').val());
+        
         firebase.auth().onAuthStateChanged( function(user) {
           if(user) {
             var user = firebase.auth().currentUser;
             if($('#input-review').val() !== '' ){
               console.log('hola');
-
+              // $('#responses').prepend("<img class='user-img' src=" + user.photoURL + "> <div class='content-review'><p>" + $('#input-review').val() + "</p></div>" );
               var newPost = {
                 name: user.displayName,
+                photo: user.photoURL,
                 message: $('#input-review').val()
               };
 
               firebase.database().ref('posts/').push(newPost);
+              
             }
           }
         });
