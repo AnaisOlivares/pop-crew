@@ -5,6 +5,8 @@ $(function () {
   $apiTdbm = 'https://api.themoviedb.org/3/genre/';
   $api = 'https://api.themoviedb.org/3/';
   $apiYoutbe = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q=';
+  $apiSpotify = 'https://api.spotify.com/v1/search?q='
+  $tokenSpotify = ' -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQBqWiO870NHEsnZ5c9dvidcNXZynYxlwRWF_xAzxuWuHsnRqLwvKP_3RHPVEtyEVU_6kQHHbuN3ScRlPEW8641XudqqLM2IsLowRoBJvSEM348tvlGKC-l-2TFzUNZKL1FbPDNwEktR4Jw3"'
 
   $('.genero-movie').on('click', function (event) {
     event.preventDefault();
@@ -25,11 +27,11 @@ $(function () {
       for (var i = 0; i < data.results.length; i++ ){
         //console.log(data.results[i]);
         $currentMovie = data.results[i];
-        $('#container-peliculas').append("<div id=" + $currentMovie.id + " class='movie-click'><img src= 'http://image.tmdb.org/t/p/w185/" + $currentMovie.poster_path + "  '><h2>" + $currentMovie.title + "</h2></div>")
+        $('#container-peliculas').append("<div id=" + $currentMovie.id + " class='movie-click movie-click-main'><img src= 'http://image.tmdb.org/t/p/w185/" + $currentMovie.poster_path + "  '><h2>" + $currentMovie.title + "</h2></div>")
 
       }
 
-      $('.movie-click').on('click', function () {
+      $('.movie-click-main').on('click', function () {
         console.log('hola');
         if(window.sessionStorage){
           sessionStorage.setItem('movieId', $(this).attr('id'));
@@ -53,6 +55,7 @@ $(function () {
       $('#genero-movie').text(data.genres[1].name);
       $('#runtime-movie').text(data.runtime + 'min');
       $('#year-movie').text(data.release_date);
+      $('#portada').html("<img class='img-responsive' src='http://image.tmdb.org/t/p/w185/" + data.poster_path + "'>")
 
       $.getJSON(($apiYoutbe + data.original_title + 'behind the scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataBehind);
 
@@ -102,9 +105,37 @@ $(function () {
           });
         }
       });
-
-
     }
+
+    
+    $('#inputGroups').on('keypress', function() {
+        $('#input-respuestas').html('');
+        if($(this).val()==''){
+          $('#input-respuestas').html('');
+        }
+        if($(this).val().length>4){
+          $inputval = $(this).val();
+          $.getJSON(($api + 'search/movie?api_key=' + $apiKeyTdbm + $apiJustLen + '&query=' + $inputval), gotPreviewMovie);
+          function gotPreviewMovie (data) {
+            $.each(data.results, function (index, item) {
+            console.log(item);
+            $('#input-respuestas').append("<div class='movie-click-main' id=" + item.id  +"><h3 class='title-input'> " + item.title  + "</h3><p>" +  item.release_date + "</p>") ;
+
+            $('.movie-click-main').on('click', function () {
+              console.log('hola');
+              if(window.sessionStorage){
+                sessionStorage.setItem('movieId', $(this).attr('id'));
+              }
+              //sessionStorage.setItem('movieId', $('.movie-click').attr('id'));
+              document.location.href = '../movie/';
+              //return false;
+            });
+          });
+        }
+      } else {
+        $('#input-respuestas').html('');
+      }
+    })
 
     //CAST COMPLETO CLICK
     $('#cast').on('click', function (event) {
@@ -144,9 +175,9 @@ $(function () {
         $postConent = $elemento.message;
         $userPhoto = $elemento.photo;
 
-        $thisPost = "<div class='single-response'><img class='user-img' src=" + $userPhoto + "> <div class='content-review'><p>" + $elemento.message + "</p></div></div>";
-
+        $thisPost = "<br><div class='single-response col-md-8 col-md-push-4'><img class='user-img' src=" + $userPhoto + "><div class='content-review'><p>" + $elemento.message + "</p></div></div>";
         $('#responses').prepend($thisPost);
+        $('.user-img').css("width:50px");
       });
 
 
@@ -165,48 +196,12 @@ $(function () {
                 message: $('#input-review').val()
               };
               firebase.database().ref('posts/').push(newPost);
-              
             }
           }
         });
       });
     });
-
-  
-
   }
-  
-  
-    // Firebase
-    // var database = firebase.database();
-    // var storage = firebase.storage();
-    // var reference = database.ref('users');
-    // var referencePost = database.ref('posts');
-  // Función postear 
-
-  // $('#submit-review').on('click', function() {
-  //   var textPost = $('#input-review').val();
-  //   var boxPost = $('#responses');
-  //   $('#submit-review').attr('disabled', false);
-  //   boxPost.prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
-  //   '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg" aria-hidden="true"></i></div></div>');
-    
-  // });
-
-  // referencePost.on('value', function(datos) {
-    // newPost.remove();
-    // posts = datos.val();
-    // Recorremos todos los post y los mostramos
-  //   $.each(posts, function(indice, valor) {
-  //     if(users) {
-  //     $('#responses').prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
-  //     '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg logo" aria-hidden="true"></i></div></div>');
-  //     }
-  //   });
-  // }, function(objetoError) {
-  //   console.log('Error de lectura:' + objetoError.code);
-  // });
-
 
   /* mostrar menu de lista de generos */
   $('#btnSlide').on('click',function(event) {
