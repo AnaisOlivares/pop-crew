@@ -1,4 +1,6 @@
 $(function () {
+
+
   $apiKeyTdbm = '26ae59014ea0da877c1779bb203cb4da';
   $apiLen = '&language=es-ES&include_adult=false&sort_by=created_at.asc';
   $apiJustLen = '&language=es-ES';
@@ -71,6 +73,7 @@ $(function () {
         $('#main-container-videos').html('');
         $('#cast-container').html('');
         $('#director-container').html('');
+        $('#review-container').removeClass('d-block');
         
         $.getJSON(($apiYoutbe + data.original_title + 'behind the scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataBehind);
 
@@ -89,6 +92,7 @@ $(function () {
         $('#main-container-videos').html('');
         $('#cast-container').html('');
         $('#director-container').html('');
+        $('#review-container').removeClass('d-block');
         
         $.getJSON(($apiYoutbe + data.original_title + 'movie scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataScenes);
 
@@ -109,7 +113,9 @@ $(function () {
       $('#main-container-videos').html('');
       $('#cast-container').html('');
       $('#director-container').html('');
+      $('#review-container').removeClass('d-block');
       event.preventDefault();
+
       $.getJSON(($api + 'movie/' + $idMovie + '/credits?api_key=' + $apiKeyTdbm + $apiJustLen), gotCastMovie);
       function gotCastMovie (data) {
         for (var i = 0; i < 10 ; i++) {
@@ -119,6 +125,41 @@ $(function () {
         console.log(data);
       }
     });
+
+    //REVIEW COMPLETO CLICK
+    $('#review').on('click', function (event) {
+      $('#main-container-videos').html('');
+      $('#cast-container').html('');
+      $('#director-container').html('');
+      $('#review-container').addClass('d-block');
+      event.preventDefault();
+
+      $.getJSON(($api + 'movie/' + $idMovie + '/reviews?api_key=' + $apiKeyTdbm + $apiJustLen), gotReviews);
+      function gotReviews (data) {
+        console.log(data);
+      }
+
+      $('#submit-review').on('click', function () {
+        console.log($('#input-review').val());
+        firebase.auth().onAuthStateChanged( function(user) {
+          if(user) {
+            var user = firebase.auth().currentUser;
+            if($('#input-review').val() !== '' ){
+              console.log('hola');
+
+              var newPost = {
+                name: user.displayName,
+                message: $('#input-review').val()
+              };
+
+              firebase.database().ref('posts/').push(newPost);
+            }
+          }
+        });
+      });
+
+    });
+
   }
 
   /* estilos de menu de lista de generos */

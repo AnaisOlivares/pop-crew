@@ -140,20 +140,28 @@
             </ul>
             <div id="director-container">
             </div>
+            <div id="review-container" class="d-none">
+              <label for="review">Cuéntanos tu opinión sobre esta película</label>
+              <textarea name="text" placeholder="¿Qué te pareció?" id='input-review' cols="30" rows="10"></textarea>
+              <button type="button" class="btn" id="submit-review">Enviar</button>
+              <div id="responses">
+                
+              </div>
+            </div>
           </section>
 
         </div>
       </div>
     </div>
    </div>
-
+  
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-  <script src="../../js/app.js"></script>
   <script src="../../js/login.js"></script>
+  <script src="../../js/app.js"></script>
   <script src="https://apis.google.com/js/api.js"></script>
 </body>
 
