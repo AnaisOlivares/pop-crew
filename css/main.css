@@ -25,7 +25,7 @@ body {
 }
 
 .background-1 {
-  background-image:url(../assets/images/fondo5.jpg);
+  background-image: url(../assets/images/fondo5.jpg);
   background-size: cover;
   /* height: 100vh; */
   background-position: center top;
@@ -77,7 +77,7 @@ span.input-group-addon.none {
 .menu {
   padding: 2px 40px;
   padding-top: 8px;
-  background: linear-gradient(to right , rgb(94, 61, 77)50%,rgb(31, 5, 37), rgb(2, 9, 31));
+  background: linear-gradient(to right, rgb(94, 61, 77)50%, rgb(31, 5, 37), rgb(2, 9, 31));
 }
 
 .info {
@@ -94,7 +94,7 @@ span.input-group-addon.none {
 
 .local-menu {
   display: inline-flex;
-  font-size: 21px;
+  font-size: 18px;
   list-style: none;
   bottom: 27px;
   padding: 40px 5px;
@@ -127,13 +127,10 @@ li a {
   background-color: transparent !important;
 }
 
-li a:hover {
-  background-color: transparent !important;
-}
-
-.d-none{
+.d-none {
   display: none;
 }
+
 .d-block {
   display: block!important;
 }
@@ -145,5 +142,21 @@ li a:hover {
 
 h2 {
   font-size: 15px;
+}
 
+a:hover {
+  color: #b483c9;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #b483c9;
+}
+
+#inputGroups {
+  color: white;
+}
+
+p {
+  font-size: 16px;
 }
