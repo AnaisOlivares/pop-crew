@@ -82,7 +82,7 @@ span.input-group-addon.none {
 
 .info {
   padding: 65px;
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
 .tabs {
@@ -115,6 +115,7 @@ span.input-group-addon.none {
 
 .portada {
   margin-top: 10%;
+  margin-left: 7%;
 }
 
 .movie-single-actor img {
@@ -159,4 +160,21 @@ a:hover {
 
 p {
   font-size: 16px;
+}
+
+#input-respuestas {
+  position: absolute;
+  left: 27%;
+  z-index: 999;
+  background: linear-gradient(to right, rgb(94, 61, 77)50%, rgb(31, 5, 37), rgb(2, 9, 31));
+  /* padding: 22px; */
+}
+.movie-click-main {
+  padding: 20px;
+  transition: 0.2s;
+}
+.movie-click-main:hover {
+  background-color: white;
+  color: black;
+  margin: 0px;
 }
