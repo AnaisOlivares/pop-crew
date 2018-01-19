@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../../css/home.css">
   <link rel="stylesheet" href="../../css/main.css">
 </head>
-<body class="bg contenedor">
+<body class="background-1 contenedor">
   <header>
     <nav class="navbar navbar-fixed-top transparent">
       <div class="container-fluid menu">
@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
       </button>
       <a href="#" id="btnSlide"><i class="fa fa-bars white" aria-hidden="true"></i></a>
-      <img class="logo" src="../../assets/images/logooficial.png" alt="logo">
+      <a href="home/index.html"><img class="logo" src="../../assets/images/logooficial.png" alt="logo"></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse container" id="bs-example-navbar-collapse-1">
@@ -52,7 +52,7 @@
               <a href="#"><i class="fa fa-bell-o logo white" aria-hidden="true"></i></a>
             </li>
             <li>
-              <img class="circle comentsPhoto">
+              <a href="#" id="btn-profile"><img class="circle comentsPhoto"></a> 
             </li>
           </ul>
         </div>
@@ -83,12 +83,13 @@
     <li class="col-md-12"><a href="" class="genero-movie" id="37">Western</a></li>
   </ul>
 </aside>
-<div class="profile col-md-6 hiden">
-    <div>
-      <span><img class="circle comentsPhoto"></span>
-      <span class="usersComent"></span><br>
-      <span class="usersEmail"></span>
-    </div>
+<div class="slide-profile hiden">
+  <span><img class="circle comentsPhoto"></span>
+  <span class="usersComent"></span>
+  <br>
+  <p class="usersEmail"></p>
+  <hr>
+  <button class="close">cerrar Sesion</button>
 </div>
 <section>
    <div id="slider1">

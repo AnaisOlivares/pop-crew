@@ -226,7 +226,7 @@ observer();
   
   $('.close').click(function() {
     firebase.auth().signOut().then(function() {
-      $(location).attr('href', '../login/login.html');
+      $(location).attr('href', '../login/index.html');
     }).catch(function(error) {
     // An error happened.
 

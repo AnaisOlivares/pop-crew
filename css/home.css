@@ -1,6 +1,4 @@
-.bg {
-  background:linear-gradient(to right, rgb(12, 12, 12), rgb(43, 2, 39));
-}
+
 /* navbar*/
 header {
   height: 80px;
@@ -42,7 +40,7 @@ span.input-group-addon.none {
 .menu {
   padding: 2px 40px;
   padding-top: 8px;
-  background: linear-gradient(to right , rgb(63, 43, 52)70%, rgb(2, 9, 31));
+  background: linear-gradient(to right , rgb(100, 66, 82),rgb(31, 5, 37), rgb(2, 9, 31));
   
 }
 
@@ -181,13 +179,16 @@ span.input-group-addon.none {
 /* css de search  container*/
 
 #container-peliculas {
-  margin: 30px 20px;
+  margin: 20px 20px;
 }
+
 .movie-click {
   float: left;
   margin-left: 30px;
   height: 75vh;
+  
 }
+
 h2 {
   font-size: 24px;
   text-align: center;
@@ -196,6 +197,7 @@ h2 {
 .movie-click img {
   width: 185px;
   height: 278px;
+  cursor: pointer;
 }
 
 
@@ -232,3 +234,17 @@ a.genero-movie:hover {
   display: none;
 }
 
+.slide-profile {
+  position: absolute;
+  right:0;
+  top: 90px;
+  background: rgb(255, 255, 255);
+  z-index: 99999;
+  color: #050505;
+  font-weight: 700;
+  width: 25%;
+  padding:16px;
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}

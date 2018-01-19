@@ -15,5 +15,10 @@ $(document).ready(function()
   //   autoplay: true,
   //   autoplaySpeed: 2000,
   // });
-
+  // $('#slider1').tinycarousel({fullWidth: true}); 
+  // autoplay();   
+  // function autoplay() {
+  //   $('#slider1').tinycarousel('next');
+  //   setTimeout(autoplay, 2000);
+  // }
 });
