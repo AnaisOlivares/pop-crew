@@ -193,19 +193,19 @@ $(function () {
     
   // });
 
-  referencePost.on('value', function(datos) {
+  // referencePost.on('value', function(datos) {
     // newPost.remove();
-    posts = datos.val();
+    // posts = datos.val();
     // Recorremos todos los post y los mostramos
-    $.each(posts, function(indice, valor) {
-      if(users) {
-      $('#responses').prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
-      '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg logo" aria-hidden="true"></i></div></div>');
-      }
-    });
-  }, function(objetoError) {
-    console.log('Error de lectura:' + objetoError.code);
-  });
+  //   $.each(posts, function(indice, valor) {
+  //     if(users) {
+  //     $('#responses').prepend('<div class="row col-md-7 border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +user.displayName+
+  //     '<img class="img-user-post"></figure></div><p class="usersComent"></p><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="fa fa-heart-o fa-lg logo" aria-hidden="true"></i><i class="fa fa-comment-o fa-lg logo" aria-hidden="true"></i></div></div>');
+  //     }
+  //   });
+  // }, function(objetoError) {
+  //   console.log('Error de lectura:' + objetoError.code);
+  // });
 
 
   /* mostrar menu de lista de generos */
