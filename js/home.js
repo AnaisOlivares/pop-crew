@@ -8,12 +8,12 @@ $(document).ready(function()
   })
 
   var menuSearch = $('.genero-movie');
-  $('.genero-movie').on('click', function() {
-    $('#container-peliculas').append('h2');
-    $('h2').prependTo().menuSearch.attr('title');
-    $('#container-peliculas').show();
+  // $('.genero-movie').on('click', function() {
+  //   $('#container-peliculas').append('h2');
+  //   $('h2').prependTo().menuSearch.attr('title');
+  //   $('#container-peliculas').show();
 
-  })
+  // })
   // $('#slick1').slick({
   //   slidesToShow: 2,
   //   slidesToScroll: 1,

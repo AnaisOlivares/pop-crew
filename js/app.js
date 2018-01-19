@@ -14,7 +14,7 @@ $(function () {
     if(window.sessionStorage){
       sessionStorage.setItem('generoId', $(this).attr('id'));
     }
-    //document.location.href = '../search/';
+    document.location.href = '../search/';
     console.log(window.location.href);
 
   });
