@@ -1,7 +1,5 @@
 body {
-  background-color: #333;
-  /* font-family: 'Rationale', sans-serif; */
-  font-family: 'Lato', sans-serif;
+  font-family: 'Rationale', sans-serif;
   font-size: 20px;
   font-weight: 500;
   margin: 0px;
@@ -36,15 +34,15 @@ body {
 }
 
 .background-1 {
-  background-image: url(../assets/images/fon1.jpg);
+  background-image:url(../assets/images/fondo5.jpg);
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
   background-position: center top;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
 }
 
 .overlay {
-  background: rgba(61, 9, 76, 0.6);
+  background: rgba(20, 1, 16, 0.466);
   height: fit-content;
 }
 
@@ -87,8 +85,8 @@ span.input-group-addon.none {
 
 .menu {
   padding: 2px 40px;
-  padding-top: 11px;
-  background: linear-gradient(to right, rgb(63, 43, 52)70%, rgb(2, 9, 31));
+  padding-top: 8px;
+  background: linear-gradient(to right , rgb(94, 61, 77)50%,rgb(31, 5, 37), rgb(2, 9, 31));
 }
 
 .info {
@@ -137,9 +135,6 @@ li {
   list-style: none;
 }
 
-.d-none {
-  display: none;
-}
 
 .d-block {
   display: block!important;

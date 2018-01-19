@@ -163,7 +163,8 @@ $(function () {
   }
 
   /* estilos de menu de lista de generos */
-  $('#btnSlide').click(function() {
+  $('#btnSlide').on('click',function(event) {
+    event.preventDefault();
     $("#slideIzq").removeClass('hiden');
     $("#slideIzq").animate({
       width: "toggle"
@@ -172,5 +173,11 @@ $(function () {
         width: "hide"
         */
     });
-  });
+  }); 
+  
+  $('#btn-profile').on('click',function(event){
+    event.preventDefault();
+    $('.slide-profile').toggleClass('hiden');
+  })
 });
+  
