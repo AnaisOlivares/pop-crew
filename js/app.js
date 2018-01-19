@@ -15,7 +15,7 @@ $(function () {
     }
     document.location.href = '../search/';
     console.log(window.location.href);
-    
+
   });
 
   if (sessionStorage.getItem('generoId')) {
@@ -64,7 +64,7 @@ $(function () {
           console.log(item);
           $('#main-container-videos').append("<div class='video-behind col-md-6'> <iframe class='video' width='520' height='300' src='//www.youtube.com/embed/" + item.id.videoId + "' frameborder='0' allowfullscreen> </iframe> <h2 class='title-video col-md-6 col-md-push-2'> " + item.snippet.title  + "</h2></div>") ;
         });
-      
+
       }
 
       //BEHIND THE SCENES CLICK
@@ -74,7 +74,7 @@ $(function () {
         $('#cast-container').html('');
         $('#director-container').html('');
         $('#review-container').removeClass('d-block');
-        
+
         $.getJSON(($apiYoutbe + data.original_title + 'behind the scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataBehind);
 
         function gotDataBehind (data) {
@@ -93,7 +93,7 @@ $(function () {
         $('#cast-container').html('');
         $('#director-container').html('');
         $('#review-container').removeClass('d-block');
-        
+
         $.getJSON(($apiYoutbe + data.original_title + 'movie scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataScenes);
 
         function gotDataScenes (data) {
@@ -172,5 +172,5 @@ $(function () {
         width: "hide"
         */
     });
-  });  
+  });
 });
