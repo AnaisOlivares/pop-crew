@@ -28,7 +28,7 @@ $(function () {
       for (var i = 0; i < data.results.length; i++ ){
         //console.log(data.results[i]);
         $currentMovie = data.results[i];
-        $('#container-peliculas').append("<div id=" + $currentMovie.id + " class='movie-click movie-click-main'><img src= 'http://image.tmdb.org/t/p/w185/" + $currentMovie.poster_path + "  '><h2>" + $currentMovie.title + "</h2></div>")
+        $('#container-peliculas').append("<div id=" + $currentMovie.id + " class='movie-click movie-click-main'><img src= 'https://image.tmdb.org/t/p/w185/" + $currentMovie.poster_path + "  '><h2>" + $currentMovie.title + "</h2></div>")
 
       }
 
@@ -56,7 +56,7 @@ $(function () {
       $('#genero-movie').text(data.genres[1].name);
       $('#runtime-movie').text(data.runtime + 'min');
       $('#year-movie').text(data.release_date);
-      $('#portada').html("<img class='img-responsive' src='http://image.tmdb.org/t/p/w185/" + data.poster_path + "'>")
+      $('#portada').html("<img class='img-responsive' src='https://image.tmdb.org/t/p/w185/" + data.poster_path + "'>")
 
       $.getJSON(($apiYoutbe + data.original_title + 'behind the scenes' + '&type=video&key=AIzaSyBezaSWH0w7yaDcfjmuoaq4Vhc6eAf9-_o'),gotDataBehind);
 
@@ -170,9 +170,9 @@ $(function () {
       $.getJSON(($api + 'movie/' + $idMovie + '/credits?api_key=' + $apiKeyTdbm + $apiJustLen), gotCastMovie);
       function gotCastMovie (data) {
         for (var i = 0; i < 10 ; i++) {
-          $('#cast-container').append("<li id=" + data.cast[i].id + " class='movie-single-actor col-md-4'><img src= 'http://image.tmdb.org/t/p/w185/" + data.cast[i].profile_path + "  '><h2>" + data.cast[i].name + "</h2></li>")
+          $('#cast-container').append("<li id=" + data.cast[i].id + " class='movie-single-actor col-md-4'><img src= 'https://image.tmdb.org/t/p/w185/" + data.cast[i].profile_path + "  '><h2>" + data.cast[i].name + "</h2></li>")
         }
-        $('#director-container').append("<div id=" + data.crew[0].id + " class='movie-single-director'><img src= 'http://image.tmdb.org/t/p/w185/" + data.crew[0].profile_path + "  '><h2>" + data.crew[0].name + "</h2><h4>" + data.crew[0].job + "</h4></div>");
+        $('#director-container').append("<div id=" + data.crew[0].id + " class='movie-single-director'><img src= 'https://image.tmdb.org/t/p/w185/" + data.crew[0].profile_path + "  '><h2>" + data.crew[0].name + "</h2><h4>" + data.crew[0].job + "</h4></div>");
         console.log(data);
       }
     });
