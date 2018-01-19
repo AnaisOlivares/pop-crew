@@ -185,3 +185,8 @@ p {
   margin: 0px;
   font-size: 14px;
 }
+
+/* estilo de comentarios */
+.user-img {
+  width: 50px !important;
+}
