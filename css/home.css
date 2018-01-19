@@ -241,7 +241,6 @@ a.genero-movie:hover {
   background: rgb(255, 255, 255);
   z-index: 99999;
   color: #050505;
-  font-weight: 700;
   width: 25%;
   padding:16px;
   word-wrap: break-word;
@@ -288,5 +287,11 @@ a.genero-movie:hover {
 }
 
 .center {
-  text-align: center;
+  display: inline-flex;
+  margin-top: 450px;
+}
+.center1 {
+  margin-left: 35%;
+  display: inline-flex;
+  margin-top: 450px;
 }
