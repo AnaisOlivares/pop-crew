@@ -119,6 +119,7 @@ span.input-group-addon.none {
   height: 230px;
   overflow: hidden;
   position: relative;
+  width: 97%;
 }
 
 .slider2 .buttons {
@@ -171,8 +172,17 @@ span.input-group-addon.none {
   width: 250px;
   height: 250px;
 }
+@media (min-width:920px) { 
+  .slider2 .viewport {
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+}
 .title {
   margin: 4%;
+  font-size: 24px;
 }
 
 /* css de search  container*/
@@ -180,13 +190,13 @@ span.input-group-addon.none {
 #container-peliculas {
   margin: 20px 20px;
 }
-
+/* 
 .movie-click {
   float: left;
   margin-left: 30px;
-  height: 75vh;
+  height: 60vh;
   
-}
+} */
 
 h2 {
   font-size: 24px;
@@ -211,12 +221,17 @@ h2 {
   z-index: 99999;
   padding-left: 14px;
   background: linear-gradient(to bottom , rgb(100, 66, 82)10%, rgba(2, 11, 36, 0.966));
-  width: 20%;
-  top: 70px;
+  top: 63px;
   left:0;  /*se oculta por la izquierda*/
   /*right: 0;  se oculta por la derecha */
 }
 
+@media (min-width:920px) { 
+  #slideIzq {
+    width: 20%;
+    top: 70px;
+  }
+}
 li.col-md-12 {
   list-style: none;
 }
@@ -285,13 +300,58 @@ a.genero-movie:hover {
  margin: 30px;
  border-radius: 10px;
 }
-
-.center {
-  display: inline-flex;
-  margin-top: 450px;
+.carousel-inner {
+  height: 189px;
 }
-.center1 {
-  margin-left: 35%;
-  display: inline-flex;
-  margin-top: 450px;
+.carousel-inner>.item>img {
+  height: 195px;
+}
+
+@media (min-width:920px) { 
+  .carousel-inner {
+    height: auto;
+  }
+  .carousel-inner>.item>img{
+    height: auto;
+  }
+  
+}
+
+/* modificando videos a desktop */
+.video {
+  width: 321px;
+  height: 250px;
+}
+@media (min-width:920px) { 
+  .video {
+    width: 520px;
+    height: 300px;
+    
+  }
+}
+h2.title-video {
+  margin-left: 58px;
+  
+}
+@media (min-width:920px) { 
+  h2.title-video {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 2rem;
+  }
+}
+/*footer */
+.white {
+  font-size: 14px;
+  margin-left: 30px;
+}
+@media (min-width:920px) { 
+  .center1 {
+    margin-left: 35%;
+    display: inline-flex;
+  }
+  .white {
+    font-size: 20px;
+  }
+  
 }

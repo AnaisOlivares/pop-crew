@@ -81,8 +81,15 @@ span.input-group-addon.none {
 }
 
 .info {
-  padding: 65px;
+  text-align: justify;
   margin-top: 20px;
+}
+@media (min-width:920px) { 
+ 
+  .info {
+    padding: 65px;
+    
+  }
 }
 
 .tabs {
@@ -115,7 +122,12 @@ span.input-group-addon.none {
 
 .portada {
   margin-top: 10%;
-  margin-left: 7%;
+  margin-left: 22%;
+}
+@media (min-width:920px) { 
+  .portada {
+    margin-left: 7%;
+  }
 }
 
 .movie-single-actor img {
@@ -173,6 +185,9 @@ p {
 .movie-click-main {
   padding: 5px 20px;
   transition: 0.2s;
+  float: left;
+  margin-left: 30px;
+  height: 60vh;
 }
 .movie-click-main:hover {
   background-color: white;

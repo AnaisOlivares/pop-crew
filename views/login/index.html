@@ -10,28 +10,28 @@
   <title>Cinefilia</title>
 </head>
 <body class="bg-log container-flex-column-log vh100-log weight">
-  <div class="center">
+  <div class="center col-xs-12">
     <span class="left">
       <img class="logito" src="../../assets/images/logooficial.png" alt="">
     </span>
   </div><br><br><br>
   <!-- Nav tabs -->
-  <div class="tab-size ">
+  <div class="tab-size col-xs-12 view-mobile view-desktop">
     <ul class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a class="white" href="#log-in" aria-controls="home" role="tab" data-toggle="tab">LOG IN</a></li>
       <li role="presentation"><a class="white" href="#register" aria-controls="profile" role="tab" data-toggle="tab">REGISTER</a></li>        
     </ul> 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="log-in">
-        <form class="container-flex-column-log text-center ">
+      <div role="tabpanel" class="tab-pane active " id="log-in">
+        <form class="container-flex-column-log text-center  col-xs-12 view-mobile view-desktop">
           <div class="form-group">
             <input type="email" class="email-login form-control"  placeholder="Email">
           </div>
           <div class="form-group">
             <input type="password" class="password-login form-control"  placeholder="Password">
           </div>
-          <br><br>
+          <br>
           <a href="../home/index.html"><button type="button" class="btn-login btn btn-success btn-log" disabled>LOG IN</button></a> 
           <br>
           <div class="form-group">
@@ -41,8 +41,8 @@
         </form>
       </div>
       <div role="tabpanel" class="tab-pane" id="register">
-        <form class="container-flex-column-log text-center ">
-          <div class="form-group">
+        <form class="container-flex-column-log text-center col-xs-12 view-mobile view-desktop">
+          <div class="form-group"> 
             <input type="name" class="name-register col-md-6 form-control"  placeholder="name">
           </div>
           <div class="form-group">
@@ -51,7 +51,7 @@
           <div class="form-group">
             <input type="password" class="password-register form-control"  placeholder="Password">
           </div>
-          <br><br>
+          <br>
           <a type="button" class="btn-register btn btn-success btn-log" href='../home/'>REGISTER</a>
         </form>
       </div>
@@ -59,6 +59,7 @@
   </div>
   <div id="contenido">
   </div>
+  <br>
   
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>

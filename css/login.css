@@ -6,8 +6,9 @@
 .container-flex-column-log {
   display: flex;
 	flex-direction: column;
-	justify-content: center;
-	padding: 2em;
+  justify-content: center;
+  padding-left: 3rem;
+	
 }
 
 .vh100-log {
@@ -31,9 +32,20 @@
   color: white;
 }
 .tab-size {
-  width: 70%;
+  width: 90%;
   border-radius: 10px;
   background: rgba(7, 0, 6, 0.575);
+}
+@media (min-width:920px) { 
+  .tab-size {
+    width: 30%;
+    border-radius: 10px;
+    background: rgba(7, 0, 6, 0.575);
+  }
+  .name-register {
+    margin-bottom: 14px;
+  }
+  
 }
 
 .btn-log {
@@ -59,9 +71,10 @@
   width: 180px;
 }
 
-@media (min-width: 970px) {
-  .tab-size {
-    width: 40%;
-  }
-}
 /********** fin de estilos logIn ***********/
+
+/* footer*/
+.white {
+  font-size: 14px;
+  
+}
