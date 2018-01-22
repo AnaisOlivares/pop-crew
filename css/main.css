@@ -101,7 +101,7 @@ span.input-group-addon.none {
 
 .local-menu {
   display: inline-flex;
-  font-size: 18px;
+  font-size: 8px;
   list-style: none;
   bottom: 27px;
   padding: 40px 5px;
@@ -127,6 +127,16 @@ span.input-group-addon.none {
 @media (min-width:920px) { 
   .portada {
     margin-left: 7%;
+  }
+
+  .local-menu {
+    display: inline-flex;
+    font-size: 18px;
+    list-style: none;
+    bottom: 27px;
+    padding: 40px 5px;
+    font-weight: 900;
+    position: relative;
   }
 }
 
