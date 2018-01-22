@@ -109,6 +109,7 @@ $(document).ready(function() {
           name: userNew,
           email: user.email,
           uid: user.uid,
+          favorite:$('.add-favorito').val()
         }).then(user => {
           console.log('Usuario Registrado');
         });
@@ -154,6 +155,7 @@ $(document).ready(function() {
         email: user.email,
         uid: user.uid,
         profilePhoto: user.photoURL,
+        favorite:$('.add-favorito').val()
       }).then(
         user => {
           $(location).attr('href', '../home/index.html');
@@ -179,6 +181,7 @@ $(document).ready(function() {
         email: user.email,
         uid: user.uid,
         profilePhoto: user.photoURL,
+        favorite:$('.add-favorito').val()
       }).then(
         user => {
           $(location).attr('href', '../home/index.html');
