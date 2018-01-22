@@ -7,13 +7,6 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
-#splash {
-  background-image: url(../assets/images/fondo5.jpg);
-  background-size: cover;
-  height: 100vh;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
 
 .container-flex-column {
   display: flex;
@@ -108,7 +101,7 @@ span.input-group-addon.none {
 
 .local-menu {
   display: inline-flex;
-  font-size: 8px;
+  font-size: px;
   list-style: none;
   bottom: 27px;
   padding: 40px 5px;
@@ -193,8 +186,8 @@ p {
 
 #input-respuestas {
   position: absolute;
-  left: 27%;
-  top: 34px;
+  left: 25%;
+  top: 70px;
   z-index: 999;
   background: linear-gradient(to right, rgb(94, 61, 77)50%, rgb(31, 5, 37), rgb(2, 9, 31));
   /* padding: 22px; */
@@ -219,9 +212,26 @@ p {
   font-size: 14px;
 }
 
+.movie-click-input {
+  transition: 0.2s;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.movie-click-input:hover {
+  transition: 0.2s;
+  margin: 0 30px;
+  cursor: pointer;
+  background-color:  rgba(117, 88, 116, 0.39);
+  color: black;
+}
 /* estilo de comentarios */
 .user-img {
   width: 50px !important;
+}
+
+hr {
+  margin: 0;
 }
 
 /* ......... */

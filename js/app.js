@@ -137,9 +137,9 @@ $(function () {
           function gotPreviewMovie (data) {
             $.each(data.results, function (index, item) {
             console.log(item);
-            $('#input-respuestas').append("<div class='movie-click-main' id=" + item.id  +"><h3 class='title-input'> " + item.title  + "</h3><p>" +  item.release_date + "</p>") ;
+            $('#input-respuestas').append("<div class='movie-click-input' id=" + item.id  +"><h5 class='title-input'> " + item.title  + "</h5><p>" +  item.release_date + "</p><hr>") ;
 
-            $('.movie-click-main').on('click', function () {
+            $('.movie-click-input').on('click', function () {
               console.log('hola');
               if(window.sessionStorage){
                 sessionStorage.setItem('movieId', $(this).attr('id'));
