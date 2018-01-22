@@ -303,6 +303,17 @@ a.genero-movie:hover {
   height: 195px;
 }
 
+/* modificando videos de mobile */
+.video {
+  width: 321px;
+  height: 250px;
+}
+
+h2.title-video {
+  margin-left: 58px;
+}
+
+
 @media (min-width:920px) { 
   .carousel-inner {
     height: auto;
@@ -326,28 +337,12 @@ a.genero-movie:hover {
     margin-left: 35%;
     display: inline-flex;
   }
-  .white {
-    font-size: 20px;
-  }
   
 }
-
 
 .center {
   text-align: center;
 }
 
-/* modificando videos a desktop */
-.video {
-  width: 321px;
-  height: 250px;
-}
 
-h2.title-video {
-  margin-left: 58px;
-}
 
-.white {
-  font-size: 14px;
-  margin-left: 30px;
-}
