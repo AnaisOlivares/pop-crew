@@ -125,11 +125,7 @@ $(function () {
         }
 
       });
-
-
     }
-
-    
     $('#inputGroups').on('keypress', function() {
         $('#input-respuestas').html('');
         if($(this).val()==''){
