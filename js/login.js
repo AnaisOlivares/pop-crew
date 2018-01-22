@@ -156,7 +156,7 @@ $(document).ready(function() {
         profilePhoto: user.photoURL,
       }).then(
         user => {
-          $(location).attr('href', '../../home/index.html');
+          $(location).attr('href', '../home/index.html');
         });
     }).catch(function(error) {
       var errorCode = error.code;
