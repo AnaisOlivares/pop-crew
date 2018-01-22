@@ -7,6 +7,13 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+#splash {
+  background-image: url(../assets/images/fondo5.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
 
 .container-flex-column {
   display: flex;
