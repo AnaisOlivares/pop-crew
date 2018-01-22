@@ -1,16 +1,17 @@
  // Initialize Firebase
- var config = {
+    
+$(document).ready(function() {
+  var config = {
     apiKey: "AIzaSyDWCh11qHdv0FB0K6Y485VGJv2NKqIBqNw",
     authDomain: "cinefilia-72cb6.firebaseapp.com",
     databaseURL: "https://cinefilia-72cb6.firebaseio.com",
     projectId: "cinefilia-72cb6",
     storageBucket: "cinefilia-72cb6.appspot.com",
     messagingSenderId: "109673178421"
-};
+  };
 
-firebase.initializeApp(config);
-   
-$(document).ready(function() {
+  firebase.initializeApp(config);
+
 
   var passwordLogin = $('.password-login');
   var emailLogin = $('.email-login');
@@ -198,31 +199,32 @@ $(document).ready(function() {
       var $comentsPhoto = $('.comentsPhoto');
       var $usersEmail = $('.usersEmail');
 
-    if (user) {
-      console.log('usuario activo');
-      var displayName = user.displayName;
-      localStorage.displayName = user.displayName;
-      var email = user.email;
-      console.log(email);
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      console.log(photoURL);
+      if (user) {
+        console.log('usuario activo');
+        var displayName = user.displayName;
+        localStorage.displayName = user.displayName;
+        var email = user.email;
+        console.log(email);
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        console.log(photoURL);
 
-      localStorage.photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
+        localStorage.photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
 
-      $comentsPhoto.attr('src', photoURL);
-      $usersComent.text(displayName);
-      $usersEmail.text(email);
+        $comentsPhoto.attr('src', photoURL);
+        $usersComent.text(displayName);
+        $usersEmail.text(email);
 
-    } else {
-      console.log('no existe usuario activo');
-    }
-  });
-}
-observer();
+      } else {
+        console.log('no existe usuario activo');
+      }
+    });
+  }
+  
+  observer();
   
   $('.close').click(function() {
     firebase.auth().signOut().then(function() {

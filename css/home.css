@@ -184,18 +184,18 @@ span.input-group-addon.none {
 .movie-click {
   float: left;
   margin-left: 30px;
-  height: 75vh;
+  height: 60vh;
   
 }
 
 h2 {
   font-size: 24px;
   text-align: center;
-  width: 185px;
+  width: 180px;
 }
 .movie-click img {
-  width: 185px;
-  height: 278px;
+  width: 180px;
+  height: 270px;
   cursor: pointer;
 }
 
@@ -252,10 +252,6 @@ a.genero-movie:hover {
   color: red;
 }
 
-.black {
-  color: black;
-}
-
 .border {
   border-radius: 10px !important;
 }
@@ -287,8 +283,7 @@ a.genero-movie:hover {
 }
 
 .center {
-  display: inline-flex;
-  margin-top: 450px;
+  text-align: center;
 }
 .center1 {
   margin-left: 35%;

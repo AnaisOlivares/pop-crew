@@ -28,7 +28,7 @@ $(function () {
       for (var i = 0; i < data.results.length; i++ ){
         //console.log(data.results[i]);
         $currentMovie = data.results[i];
-        $('#container-peliculas').append("<div id=" + $currentMovie.id + " class='movie-click movie-click-main'><img src= 'https://image.tmdb.org/t/p/w185/" + $currentMovie.poster_path + "  '><h2>" + $currentMovie.title + "</h2></div>")
+        $('#container-peliculas').append("<div id=" + $currentMovie.id + " class='movie-click movie-click-main'><img src= 'https://image.tmdb.org/t/p/w185/" + $currentMovie.poster_path + "  '><h2>" + $currentMovie.title + "</h2></div>");
 
       }
 
@@ -226,15 +226,10 @@ $(function () {
   }
 
   /* mostrar menu de lista de generos */
-  $('#btnSlide').on('click',function(event) {
-    event.preventDefault();
-    $("#slideIzq").removeClass('hiden');
+  $('#btnSlide').on('click',function() {
+    $("#slideIzq").toggleClass('block');
     $("#slideIzq").animate({
       width: "toggle"
-        /*
-        width: "show"
-        width: "hide"
-        */
     });
   }); 
   
@@ -247,7 +242,7 @@ $(function () {
   // funcion agregar favoritos
   $('#favorito').on('click',function(){
     $('.icon-favorito').addClass('red');
-    $('.add-favorito').append('<p><span><i class="fa fa-film" aria-hidden="true"></i>&nbsp&nbsp'+$('#title-movie').html()+'</span></p>');
+    $('.add-favorito').append('<p><span class="img-port col-md-3">'+$('#portada').html()+'</span><span col-md-9>'+$('#title-movie').html()+'</span></p><hr>');
   });
   
   $('#i-favorito').on('click',function(event){

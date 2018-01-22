@@ -27,7 +27,7 @@ body {
 .background-1 {
   background-image: url(../assets/images/fondo5.jpg);
   background-size: cover;
-  /* height: 100vh; */
+  height: 100%;
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -175,10 +175,11 @@ p {
   transition: 0.2s;
 }
 .movie-click-main:hover {
-  background-color: white;
+  background-color: rgba(85, 65, 84, 0.555);
   color: black;
-  margin: 0px;
+  font-weight: 700;
   height: fit-content;
+  height: 60vh;
 }
 
 .movie-click-main h3 {
@@ -189,4 +190,13 @@ p {
 /* estilo de comentarios */
 .user-img {
   width: 50px !important;
+}
+
+/* ......... */
+.img-port img {
+  width: 30px !important;
+}
+
+.block {
+  display: block;
 }
