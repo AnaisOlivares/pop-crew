@@ -108,8 +108,7 @@ $(document).ready(function() {
         firebase.database().ref('users/' + user.uid).set({
           name: userNew,
           email: user.email,
-          uid: user.uid,
-          favorite:$('.add-favorito').val()
+          uid: user.uid
         }).then(user => {
           console.log('Usuario Registrado');
         });
@@ -154,8 +153,7 @@ $(document).ready(function() {
         name: user.displayName,
         email: user.email,
         uid: user.uid,
-        profilePhoto: user.photoURL,
-        favorite:$('.add-favorito').val()
+        profilePhoto: user.photoURL
       }).then(
         user => {
           $(location).attr('href', '../home/index.html');
@@ -180,8 +178,7 @@ $(document).ready(function() {
         name: user.displayName,
         email: user.email,
         uid: user.uid,
-        profilePhoto: user.photoURL,
-        favorite:$('.add-favorito').val()
+        profilePhoto: user.photoURL
       }).then(
         user => {
           $(location).attr('href', '../home/index.html');
