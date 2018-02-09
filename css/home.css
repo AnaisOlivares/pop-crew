@@ -218,6 +218,7 @@ h2 {
 
 #slideIzq{
   position: absolute;
+  position: fixed;
   z-index: 99999;
   padding-left: 14px;
   background: linear-gradient(to bottom , rgb(100, 66, 82)10%, rgba(2, 11, 36, 0.966));
@@ -251,6 +252,7 @@ a.genero-movie:hover {
 
 .slide-profile, .add-favorito {
   position: absolute;
+  position: fixed;
   right:0;
   top: 80px;
   background: rgb(255, 255, 255);

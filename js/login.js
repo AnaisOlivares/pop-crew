@@ -146,18 +146,16 @@ $(document).ready(function() {
   $('.btn-google').on('click', function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
-
       var user = result.user;
 
-      firebase.database().ref('users/' + user.uid).set({
-        name: user.displayName,
-        email: user.email,
-        uid: user.uid,
-        profilePhoto: user.photoURL
+      // firebase.database().ref('users/' + user.uid).set({
+      //   name: user.displayName,
+      //   email: user.email,
+      //   uid: user.uid,
+      //   profilePhoto: user.photoURL
       }).then(
         user => {
           $(location).attr('href', '../home/index.html');
-        });
     }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -165,24 +163,23 @@ $(document).ready(function() {
       var credential = error.credential;
     });
   });
+
+
   
   // login facebook
   var providerFacebook = new firebase.auth.FacebookAuthProvider();
   $('.btn-facebook').on('click', function() {
     firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
       var token = result.credential.accessToken;
-
       var user = result.user;
-
-      firebase.database().ref('users/' + user.uid).set({
-        name: user.displayName,
-        email: user.email,
-        uid: user.uid,
-        profilePhoto: user.photoURL
-      }).then(
-        user => {
-          $(location).attr('href', '../home/index.html');
-        });
+      // firebase.database().ref('users/' + user.uid).set({
+      //   name: user.displayName,
+      //   email: user.email,
+      //   uid: user.uid,
+      //   profilePhoto: user.photoURL
+    }).then(
+      user => {
+        $(location).attr('href', '../home/index.html');
     }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;

@@ -193,15 +193,13 @@ $(function () {
         $postConent = $elemento.message;
         $userPhoto = $elemento.photo;
 
-        $thisPost = "<br><div class='single-response col-md-8 col-md-push-4'><img class='user-img' src=" + $userPhoto + "><div class='content-review'><p>" + $elemento.message + "</p></div></div>";
+        $thisPost = "<div class='single-response col-md-8'><div class='col-md-3'><img class='user-img img-responsive' src=" + $userPhoto + "></div><div class='col-md-5 content-review'><p class='name-coment'>" + $elemento.name + "</p><p>" + $elemento.message + "</p></div></div><br><br>";
         $('#responses').prepend($thisPost);
-        $('.user-img').css("width:50px");
       });
 
 
       $('#submit-review').on('click', function () {
         console.log($('#input-review').val());
-        
         firebase.auth().onAuthStateChanged( function(user) {
           if(user) {
             var user = firebase.auth().currentUser;
@@ -238,7 +236,8 @@ $(function () {
   // funcion agregar favoritos
   $('#favorito').on('click',function(){
     $('.icon-favorito').addClass('red');
-    $('.add-favorito').append('<p><span class="img-port col-md-3">'+$('#portada').html()+'</span><span col-md-9>'+$('#title-movie').html()+'</span></p><hr>');
+    $(this).attr('disabled',true);
+    $('.add-favorito').append('<p><span class="img-port img-responsive col-md-3">'+$('#portada').html()+'</span><span col-md-9>'+$('#title-movie').html()+'</span></p><br><hr>');
   });
   
   $('#i-favorito').on('click',function(event){
@@ -255,11 +254,12 @@ $(function () {
         $(this).attr("title");
         $('#container-peliculas').show();
      });
-    
-    
-   
-
   })
 
+
+    // mostrar el nombre de genero
+    $('.gen-aside li a').on('click',function(){
+      $('#name-genero').append($('.gen-aside li a').text);
+    });
 });
   
