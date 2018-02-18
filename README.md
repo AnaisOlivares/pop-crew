@@ -9,12 +9,12 @@ Cinefilia es un website donde encontrarás Behind the scenes, cast, reviews y so
 >* ¿No te ha pasado que te enganchas tanto con una película y quieres saber todo acerca de ella?, pues llegó Cinefilia.
 
 
-> * Cinefilia nace con la idea de brindar información adicional de las mejores películas, generar contenido exclusivo acerca de la pre-producción/producción/post-producción.
+> * Cinefilia nace con la idea de brindar información adicional de las mejores películas, generar contenido exclusivo acerca de la pre-producción / producción / post-producción.
 
 
->* Todo esto en un solo lugar al alcance de  aquellos Cinéfilos y publico en general interesado por el cine.
+>* Todo esto en un solo lugar al alcance de  aquellos Cinéfilos y público interesado por el cine.
 ## ETAPAS DE DESARROLLO
-### PLANIFIACIÓN
+### PLANIFICACIÓN
 >Implementamos una lista de tareas es Trello para agendar los pasos que estamos dando, tener agendado lo que tenemos hecho y lo que falta por hacer y así regular nuestro tiempo.
 
 ![home](assets/images/Trello.png)
@@ -29,13 +29,13 @@ Cinefilia es un website donde encontrarás Behind the scenes, cast, reviews y so
 
 ![home](assets/images/tex.jpg)
 
->* Para ello empezamos a crear una web donde encontraran toda la información adicional, el ANTES, DURANTE Y DESPUES de tus películas favoritas ,aquellos datos curiosos, bloopers, detrás de cámaras, entrevistas exclusivas, escenas inéditas ,soundtrack ,en resumen ver más allá de lo evidente.
+>* Para ello empezamos a crear una web donde encontrarán toda la información adicional, el ANTES, DURANTE Y DESPUÉS de tus películas favoritas ,aquellos datos curiosos, bloopers, detrás de cámaras, entrevistas exclusivas, escenas inéditas ,soundtracks ,en resumen ver más allá de lo evidente.
 
 ### RESEARCH
 >En este proceso comenzaron las entrevistas vía redes sociales a nuestro público objeto, cinéfilos, uniendo y analizando sus respuestas fuimos teniendo una idea más amplia acerca de todo aspecto de nuestra web.
 
 ### SKETCH
->* Una vez selecionado el tema , nos enfocamos en el diseño.Para el sketching queríamos un vista que llame la atención al usuario, por ello Marina y yo trabajamos en el modelo.Anais mientras tanto veia el color de fondo para toda la web. Elizabeth se encargo de plasmar el prototipado final tomando en cuenta el sketch trabajado.
+>* Una vez selecionado el tema , nos enfocamos en el diseño. Para el sketching queríamos un vista que llame la atención al usuario, y encierre nuestros objetivos, elegimos colores de acuerdo a lo que queremos mostrar, creatividad, imaginación para lllegar al éxito.
 
 
 >*  Lo siguiente a realizar fue delegar funciones a cada miembro para el maquetado con html , css, funcionalidad otros.
@@ -43,7 +43,7 @@ Cinefilia es un website donde encontrarás Behind the scenes, cast, reviews y so
 ![home](assets/images/vista_home.png)
 ![pelicula](assets/images/vista_pelicula.png)
 
->*  El objetivo a lograr es tener la pagina con la funcionalidad al 100% ,obtener una data con toda la informacion de los videos que queremos mostrar y mostrarlo en la pagina.
+>*  El objetivo a lograr es tener la página con la funcionalidad al 100% ,obtener una data con toda la información de los videos que queremos mostrar y mostrarlo en la página.
 
 
 
@@ -56,11 +56,11 @@ Cinefilia es un website donde encontrarás Behind the scenes, cast, reviews y so
 - `CSS3`
 - `bootstrap`
 - `FireBase`
-- `API OMDB`
+- `API The Movie Database`
 - `Trello` https://trello.com/b/gtrTawgq/pop4
 
-##  Créditos
-* Elizabet Alcala
-* Laura Galindo
+##  SQUAD
+* Elizabet Alcalá
 * Anais Olivares
+* Laura Galindo
 * Marina Rodriguez
