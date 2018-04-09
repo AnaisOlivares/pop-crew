@@ -1,7 +1,8 @@
 # Cinefilia
 Cinefilia es un website donde encontrarás Behind the scenes, cast, reviews y soundtracks de todas las películas.
 
-![cinefilia](https://user-images.githubusercontent.com/32288883/36232975-e0a47256-11b1-11e8-885d-66f9beed16de.png)
+![elgranshowman](https://user-images.githubusercontent.com/32288883/38474472-db4d760e-3b64-11e8-8de9-50048b38f1ed.png)
+
 ## Desarrollado para
 [Laboratoria](http://laboratoria.la)
 
