@@ -85,7 +85,7 @@
 
         <div class="container-fluid background-1">
           <div class="row overlay">
-            <section class="black info logo col-md-7">
+            <section class="black info logo col-md-7 col-md-push-1 col-xs-10 col-xs-push-1">
               <h1 id="title-movie" class="title-movie white"></h1>
               <h4 id="tagline-movie" class="white"></h4>
               <p id='plot-movie' class="white"></p><br>
@@ -98,17 +98,17 @@
                 <p class="white">Agregar Favoritos:&nbsp&nbsp<button id="favorito" class="white"><i class="fa fa-heart fa-lg icon-favorito" aria-hidden="true"></i></button></p>
               </div>
             </section>
-            <div class="portada col-md-4 col-md-push-0" id="portada">
-              
+            <div class="portada col-md-3 col-md-push-1" id="portada">
+
             </div>
             <br>
-            <div class="center">
-              <ul class="local-menu col-xs-12 col-md-9 col-md-push-3">
-                <li><a href="#" class="filters" id="behind">Behind The Scenes</a></li>
-                <li><a href="#" class="filters" id="top-scenes">Top Scenes</a></li>
-                <li><a href="#" class="filters" id="cast">Cast</a></li>
-                <li><a href="#" class="filters" id="review">Review</a></li>
-                <li><a href="#" class="filters" id="extra">Soundtracks</a></li>
+            <div class="center container">
+              <ul class="row local-menu col-xs-12 col-md-9 col-md-push-2">
+                <li class="col-xs-2 col-md-3"><a href="#" class="filters col-xs-12" id="behind">Behind The Scenes</a></li>
+                <li class="col-xs-2"><a href="#" class="filters col-xs-12" id="top-scenes">Top Scenes</a></li>
+                <li class="col-xs-2"><a href="#" class="filters col-xs-12" id="cast">Cast</a></li>
+                <li class="col-xs-2"><a href="#" class="filters col-xs-12" id="review">Review</a></li>
+                <li class="col-xs-2"><a href="#" class="filters col-xs-12" id="extra">Soundtracks</a></li>
               </ul>
             </div>
             <br><br>
@@ -130,7 +130,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- div de cerrar sesion -->
   <div class="slide-profile hiden">
@@ -148,6 +147,8 @@
   <footer class="center">
     <p class="white">© 2018  Cinefilia by Elizabeth - Laura - Anais - Marina</p>
   </footer>
+</div>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script src="https://apis.google.com/js/api.js"></script>

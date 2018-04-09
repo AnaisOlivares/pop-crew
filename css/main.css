@@ -88,10 +88,10 @@ span.input-group-addon.none {
   text-align: justify;
   margin-top: 20px;
 }
-@media (min-width:920px) { 
+@media (min-width:920px) {
   .info {
     padding: 65px;
-    
+
   }
 }
 
@@ -130,7 +130,7 @@ span.input-group-addon.none {
   margin-top: 10%;
   margin-left: 22%;
 }
-@media (min-width:920px) { 
+@media (min-width:920px) {
   .portada {
     margin-left: 7%;
   }
@@ -146,6 +146,11 @@ span.input-group-addon.none {
   }
 }
 
+@media (max-width:425px) {
+  li.col-xs-2 {
+    font-size: 18px;
+  }
+}
 .movie-single-actor img {
   border-radius: 100%;
   padding: 7px;
@@ -199,18 +204,16 @@ p {
   /* padding: 22px; */
 }
 .movie-click-main {
-  padding: 5px 20px;
+  padding: 30px 20px;
   transition: 0.2s;
   float: left;
   margin-left: 30px;
-  height: 60vh;
+  height: fit-content;
 }
 .movie-click-main:hover {
   background-color: rgba(85, 65, 84, 0.555);
-  color: black;
   font-weight: 700;
   height: fit-content;
-  height: 60vh;
 }
 
 .movie-click-main h3 {
@@ -260,6 +263,7 @@ p {
   padding: 7px 38px;
   border-radius: 20px;
 }
+
 
 .name-coment {
   font-family: Arial, Helvetica, sans-serif;

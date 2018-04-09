@@ -1,4 +1,8 @@
 /* navbar*/
+body {
+  overflow-x: hidden;
+}
+
 header {
   height: 80px;
 }
@@ -40,7 +44,7 @@ span.input-group-addon.none {
   padding: 2px 40px;
   padding-top: 8px;
   background: linear-gradient(to right , rgb(100, 66, 82),rgb(31, 5, 37), rgb(2, 9, 31));
-  
+
 }
 
 /* Tiny Carousel */
@@ -172,7 +176,7 @@ span.input-group-addon.none {
   width: 250px;
   height: 250px;
 }
-@media (min-width:920px) { 
+@media (min-width:920px) {
   .slider2 .viewport {
     height: 230px;
     overflow: hidden;
@@ -190,12 +194,12 @@ span.input-group-addon.none {
 #container-peliculas {
   margin: 20px 20px;
 }
-/* 
+/*
 .movie-click {
   float: left;
   margin-left: 30px;
   height: 60vh;
-  
+
 } */
 
 h2 {
@@ -227,7 +231,7 @@ h2 {
   /*right: 0;  se oculta por la derecha */
 }
 
-@media (min-width:920px) { 
+@media (min-width:920px) {
   #slideIzq {
     width: 20%;
     top: 70px;
@@ -316,7 +320,7 @@ h2.title-video {
 }
 
 
-@media (min-width:920px) { 
+@media (min-width:920px) {
   .carousel-inner {
     height: auto;
   }
@@ -332,14 +336,14 @@ h2.title-video {
   .video {
     width: 520px;
     height: 300px;
-    
+
   }
  /* footer */
   .center1 {
     margin-left: 35%;
     display: inline-flex;
   }
-  
+
 }
 
 .center {
@@ -349,4 +353,3 @@ h2.title-video {
 .video-behind {
   height: 430px;
 }
-
